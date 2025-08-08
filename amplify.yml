@@ -4,7 +4,7 @@ env:
     # Application versions
     DART_SASS_VERSION: 1.89.2
     #GO_VERSION: 1.24.6
-    GO_VERSION: 1.21
+    GO_VERSION: 1.24.2
     GOCACHE: /tmp/go-build
     GOMODCACHE: /tmp/go/pkg/mod
     HUGO_VERSION: 0.148.2
