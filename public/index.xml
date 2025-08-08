@@ -8,67 +8,67 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>01-Project-Setup-and-Git-Integrations</title>
-      <link>http://localhost:1313/01-project-setup-and-git-integration/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/01-project-setup-and-git-integration/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>02-Designing-an-Api-Specifications</title>
-      <link>http://localhost:1313/02-designing-an-api-specification/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/02-designing-an-api-specification/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>03-Collections</title>
-      <link>http://localhost:1313/03-collections/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/03-collections/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>04-Testings</title>
-      <link>http://localhost:1313/04-testing/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/04-testing/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>05-Custom-Lintings</title>
-      <link>http://localhost:1313/05-custom-linting/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/05-custom-linting/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>06-CICD-Testings</title>
-      <link>http://localhost:1313/06-cicd-testing/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/06-cicd-testing/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>07-Mockings</title>
-      <link>http://localhost:1313/07-mocking/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/07-mocking/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>08-Secrets-and-Secure-Collaborations</title>
-      <link>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Insomnia Overview</title>
-      <link>http://localhost:1313/00-insomnia-overview/index.html</link>
+      <link>http://localhost:1313/01-insomnia-overview/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/00-insomnia-overview/index.html</guid>
-      <description>Module 00: Insomnia Overview Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.&#xA;With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.&#xA;What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:</description>
+      <guid>http://localhost:1313/01-insomnia-overview/index.html</guid>
+      <description>Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.&#xA;With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.&#xA;What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:</description>
+    </item>
+    <item>
+      <title>Project Setup and Git Integration</title>
+      <link>http://localhost:1313/02-project-setup-and-git-integration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/02-project-setup-and-git-integration/index.html</guid>
+      <description>Welcome to the Insomnia Workshop.&#xA;In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.&#xA;This first module focuses on setting up your project using Git integration with Insomnia v11.&#xA;About This Workshop You will be working with a Git-backed API specification project for the kong-bank Accounts API. The template repository for this service is hosted on your organisation’s GitHub Enterprise instance and will be referenced throughout this workshop as:</description>
+    </item>
+    <item>
+      <title>Building the API Specification</title>
+      <link>http://localhost:1313/03-designing-an-api-specification/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/03-designing-an-api-specification/index.html</guid>
+      <description>In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.&#xA;By the end of this module, you’ll have:&#xA;Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.</description>
+    </item>
+    <item>
+      <title>Collections and Scripting</title>
+      <link>http://localhost:1313/04-collections/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/04-collections/index.html</guid>
+      <description>Now that we have built up our API specification and committed our work, it’s time to move into the Collections phase of the Insomnia workflow.&#xA;In this module, you will:&#xA;Generate a full request collection Understand how a complete specification improves collection generation Add basic scripting to streamline account management Commit your work and merge it back to main Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.</description>
+    </item>
+    <item>
+      <title>Creating Test Suites and Extending the Specification</title>
+      <link>http://localhost:1313/05-testing/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/05-testing/index.html</guid>
+      <description>In this module, we move beyond scripting and focus on structured, reusable Test Suites in Insomnia, while also extending our specification with a new DELETE operation.&#xA;With your API specification complete and your collections generated, it’s time to ensure everything works reliably, not just manually, but automatically.&#xA;In this module, you will:&#xA;Understand how Test Suites improve API quality Create automated tests linked to your requests Extend the API by adding a DELETE operation Practice versioning and proper Git commit hygiene Commit and push your testing and spec changes Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.</description>
+    </item>
+    <item>
+      <title>Custom Linting with Spectral in Insomnia</title>
+      <link>http://localhost:1313/06-custom-linting/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/06-custom-linting/index.html</guid>
+      <description>In this module, we introduce the concept of extending and customising Spectral linting in Insomnia. Many organisations define internal API design standards that build on top of OpenAPI. Insomnia allows you to enforce these standards through custom rules using Spectral — a powerful and flexible linter for structured JSON/YAML documents.&#xA;We’ll walk through the following:&#xA;What Spectral is and how it works in Insomnia How to override, extend, or remove linting rules Creating a .spectral.yaml configuration Enforcing internal standards (such as disallowing DELETE endpoints) Using Git and semantic versioning best practices to manage these changes Step 1: Understanding Spectral Linting Spectral is a rules engine built specifically for OpenAPI, JSON Schema, and AsyncAPI specifications. It scans your spec and flags issues related to style, structure, consistency, or breaking changes.</description>
+    </item>
+    <item>
+      <title>CI/CD Testing with Inso CLI</title>
+      <link>http://localhost:1313/07-cicd-testing/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/07-cicd-testing/index.html</guid>
+      <description>In this module, we introduce the Inso CLI — the command-line companion to the Insomnia desktop application. Inso CLI is designed for use in terminal workflows and automation pipelines, bringing the power of Insomnia into your CI/CD systems.&#xA;Official docs: Inso CLI Introduction&#xA;Step 1: Understanding Inso CLI Inso CLI is built on Node.js and uses the same core libraries as the Insomnia app. It allows you to:&#xA;Run linting against your OpenAPI spec Execute unit tests defined in Insomnia Export and execute collections Integrate seamlessly into CI/CD pipelines Its primary use case is to enforce API quality and consistency at key stages in the software delivery lifecycle — not just on a developer’s machine, but in the merge and release process itself.</description>
+    </item>
+    <item>
+      <title>Mocking</title>
+      <link>http://localhost:1313/08-mocking/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/08-mocking/index.html</guid>
+      <description>In this module, we explore the value of API mocking and demonstrate how to use Insomnia’s self-hosted mocking to support dependent service development — in our case, the transactions-service which relies on the accounts-service.&#xA;Mocking is an important capability in modern API design and development. It allows teams to:&#xA;Work in parallel — consumers can develop against a stable interface before the backend is live. Prototype integrations without depending on backend uptime. Validate request/response formats early and often. Insomnia supports two modes of mocking:</description>
+    </item>
+    <item>
+      <title>Secrets and Secure Collaboration</title>
+      <link>http://localhost:1313/09-secrets-and-secure-collaboration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/09-secrets-and-secure-collaboration/index.html</guid>
+      <description>Managing secrets securely is a vital part of working with APIs, especially in teams and across environments. In this module, we’ll explore how Insomnia supports secret management and how you can integrate with enterprise-grade external vaults to securely store and share sensitive data.&#xA;We will:&#xA;Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:</description>
     </item>
   </channel>
 </rss>
