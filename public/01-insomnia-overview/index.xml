@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Insomnia Overview :: APIOps with Kong Konnet and Insomnia</title>
-    <link>http://localhost:1313/01-insomnia-overview/index.html</link>
+    <link>https://example.org/01-insomnia-overview/index.html</link>
     <description>Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.&#xA;With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.&#xA;What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/01-insomnia-overview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/01-insomnia-overview/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
