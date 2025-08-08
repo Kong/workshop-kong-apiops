@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/01-insomnia-overview/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/02-project-setup-and-git-integration/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/03-designing-an-api-specification/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/04-collections/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/05-testing/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/06-custom-linting/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/07-cicd-testing/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/08-mocking/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/09-secrets-and-secure-collaboration/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/index.html</loc>
   </url>
   <url>

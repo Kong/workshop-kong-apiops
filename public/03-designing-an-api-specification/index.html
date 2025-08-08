@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
+By the end of this module, you’ll have:
+Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta name="twitter:description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
+By the end of this module, you’ll have:
+Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
+    <meta property="og:url" content="http://localhost:1313/03-designing-an-api-specification/index.html">
+    <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
+    <meta property="og:title" content="Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta property="og:description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
+By the end of this module, you’ll have:
+Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta itemprop="description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
+By the end of this module, you’ll have:
+Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
+    <meta itemprop="wordCount" content="2364">
+    <title>Building the API Specification :: APIOps with Kong Konnect and Insomnia</title>
+    <link href="/03-designing-an-api-specification/index.xml" rel="alternate" type="application/rss+xml" title="Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <link href="/css/auto-complete/auto-complete.min.css?1754681639" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1754681639" defer></script>
+    <script src="/js/search-lunr.js?1754681639" defer></script>
+    <script src="/js/search.js?1754681639" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1754681639";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1754681639" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1754681639" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1754681639" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1754681639" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754681639" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754681639" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754681639" rel="stylesheet">
+    <link href="/css/theme.css?1754681639" rel="stylesheet">
+    <link href="/css/format-html.css?1754681639" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/03-designing-an-api-specification\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/03-designing-an-api-specification/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#step-1-create-a-feature-branch-in-insomnia">Step 1: Create a Feature Branch in Insomnia</a></li>
+    <li><a href="#step-2-create-a-new-api-specification">Step 2: Create a New API Specification</a>
+      <ul>
+        <li><a href="#commit-and-push-your-changes">Commit and Push Your Changes</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-add-a-minimal-valid-openapi-structure">Step 3: Add a Minimal Valid <code>OpenAPI</code> Structure</a></li>
+    <li><a href="#step-4-update-the-info-section">Step 4: Update the Info Section</a></li>
+    <li><a href="#step-5-add-the-accounts-endpoint">Step 5: Add the <code>/accounts</code> Endpoint</a></li>
+    <li><a href="#whats-missing">What&rsquo;s Missing?</a>
+      <ul>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#commit-and-push-your-changes-for-the-new-endpoints">Commit and Push Your Changes for the New Endpoints</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-6-paste-the-completed-specification">Step 6: Paste the Completed Specification</a>
+      <ul>
+        <li><a href="#endpoint-overview">Endpoint Overview</a></li>
+        <li><a href="#final-commit-and-push">Final Commit and Push</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Building the API Specification</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/02-project-setup-and-git-integration/index.html" title="Project Setup and Git Integration (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/04-collections/index.html" title="Collections and Scripting (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 03-designing-an-api-specification" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="building-the-api-specification">Building the API Specification</h1>
+
+<p>In this module, we will design and build a structured <code>OpenAPI</code> specification for the Accounts API, using Insomnia&rsquo;s built-in Git integration and linting features.</p>
+<p>By the end of this module, you&rsquo;ll have:</p>
+<ul>
+<li>Created a Git-tracked design document</li>
+<li>Defined a valid and useful <code>OpenAPI</code> specification</li>
+<li>Built endpoints with proper schemas, examples, and metadata</li>
+<li>Practiced clean Git commit habits</li>
+<li>Prepared the foundation for generating collections and creating tests</li>
+</ul>
+<blockquote>
+<p><strong>Important:</strong> We will commit and push changes at key points, following best practice.</p></blockquote>
+<h2 id="step-1-create-a-feature-branch-in-insomnia">Step 1: Create a Feature Branch in Insomnia</h2>
+<p>In the previous chapter you should have created the <code>feature/api-spec-design</code> branch, if you did not or are coming to this chapter directly then please create the feature branch now and switch to using it.</p>
+<ol>
+<li>Open your <code>accounts-service</code> project in Insomnia.</li>
+<li>In the lower left Git panel, click on the branch name.</li>
+<li>Create a new branch named: <code>feature/api-spec-design</code></li>
+<li>Click <strong>Create</strong> to switch to it.</li>
+</ol>
+<blockquote>
+<p>Working on feature branches makes collaboration easier and prevents conflicts.</p></blockquote>
+<h2 id="step-2-create-a-new-api-specification">Step 2: Create a New API Specification</h2>
+<p>Let&rsquo;s create a new <code>OpenAPI</code> design document inside the Git project.</p>
+<ol>
+<li>Click the <code>+ Create</code> button and choose <strong>Design Document</strong>.
+<a href="#R-image-3f8c008d8e985caa374de1317b347103" class="lightbox-link"><img alt="<code>create-document</code>" class="lazy lightbox figure-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-create-design-document.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f8c008d8e985caa374de1317b347103"><img alt="<code>create-document</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-create-design-document.png"></a></li>
+<li>Set:
+<ul>
+<li>Name: <code>accounts-service</code></li>
+<li>Location: <code>api/accounts-service.yaml</code></li>
+</ul>
+</li>
+<li>Click <strong>Create Document</strong>.
+<a href="#R-image-fcb2c9bebb3750c34dc5bbc8dc408024" class="lightbox-link"><img alt="<code>create-document-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-design-document-details.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fcb2c9bebb3750c34dc5bbc8dc408024"><img alt="<code>create-document-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-design-document-details.png"></a>
+You&rsquo;ll now have an empty spec file, fully tracked in Git.</li>
+</ol>
+<h3 id="commit-and-push-your-changes">Commit and Push Your Changes</h3>
+<p>Use the Insomnia Git commit menu:</p>
+<ol>
+<li>Click on the Git dropdown in the left sidebar.</li>
+<li>Select &ldquo;Commit&rdquo;.</li>
+<li>Inspect the changes.</li>
+<li>If happy, stage the changes.</li>
+<li>Enter a meaningful commit message: <code>chore: create initial OpenAPI specification document</code></li>
+<li>Click <strong>Commit</strong>.</li>
+<li>Click <strong>Push</strong> to update your remote repository.</li>
+</ol>
+<p><a href="#R-image-ce847fcdab28aaa46c8b1f735eadb0a1" class="lightbox-link"><img alt="<code>commit-1</code>" class="lazy lightbox figure-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-commit-screen.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce847fcdab28aaa46c8b1f735eadb0a1"><img alt="<code>commit-1</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-commit-screen.png"></a></p>
+<h2 id="step-3-add-a-minimal-valid-openapi-structure">Step 3: Add a Minimal Valid <code>OpenAPI</code> Structure</h2>
+<p>Let&rsquo;s start with the simplest valid <code>OpenAPI</code> structure.</p>
+<p>Paste this into your design document:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">openapi</span>: <span style="color:#ae81ff">3.0.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">info</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Accounts API</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">version</span>: <span style="color:#ae81ff">1.0.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">paths</span>: {}</span></span></code></pre></div>
+<p>You will immediately see linting feedback at the bottom from Spectral.</p>
+<ul>
+<li>Missing description</li>
+<li>Missing contact</li>
+<li>Missing servers</li>
+</ul>
+<p>In order to fix these here&rsquo;s what to add and why:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Issue</th>
+          <th>Fix</th>
+          <th>Why It Matters</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>info.description</code></td>
+          <td>Add a description to the <code>info</code> block</td>
+          <td>Gives consumers an overview of what the API does and its intended use case</td>
+      </tr>
+      <tr>
+          <td><code>info.contact.name</code></td>
+          <td>Add the maintainer or team name under <code>info.contact.name</code></td>
+          <td>Makes it clear who to reach out to for support, clarification, or ownership</td>
+      </tr>
+      <tr>
+          <td><code>info.contact.email</code></td>
+          <td>Add an email address under <code>info.contact.email</code></td>
+          <td>Provides a direct contact point for API consumers or stakeholders</td>
+      </tr>
+      <tr>
+          <td><code>servers</code></td>
+          <td>Define a <code>servers</code> block at the root level</td>
+          <td>Provides users and tools with the base URLs for different environments (e.g., local, test, production)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="step-4-update-the-info-section">Step 4: Update the Info Section</h2>
+<p>Update the info section and add supporting metadata to fix the linting errors:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">openapi</span>: <span style="color:#ae81ff">3.0.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">info</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Accounts API</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">version</span>: <span style="color:#ae81ff">1.0.0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">This API manages account information and balances.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contact</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">email</span>: <span style="color:#ae81ff">stephen.brown@konghq.com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">servers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://localhost:8081</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Local development server</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">paths</span>: {}</span></span></code></pre></div>
+<h2 id="step-5-add-the-accounts-endpoint">Step 5: Add the <code>/accounts</code> Endpoint</h2>
+<p>Now we define the <code>POST /accounts</code> operation to create new accounts.</p>
+<p>Replace the <code>paths</code> section with this:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/accounts</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Create account</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;201&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account created</span></span></span></code></pre></div>
+<p>You will notice that this new endpoint will trigger linter warnings</p>
+<h2 id="whats-missing">What&rsquo;s Missing?</h2>
+<p>While this minimal spec is valid YAML, it will:</p>
+<ul>
+<li>Trigger Spectral linter warnings</li>
+<li>Fail to generate a usable request body in Insomnia</li>
+<li>Be incomplete for testing and mocking</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Missing Element</th>
+          <th>Why It Matters</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>description</code></td>
+          <td>Without it, documentation lacks detail</td>
+      </tr>
+      <tr>
+          <td><code>operationId</code></td>
+          <td>Required by tools to uniquely identify the operation</td>
+      </tr>
+      <tr>
+          <td><code>tag</code></td>
+          <td>Used by Insomnia to group requests</td>
+      </tr>
+      <tr>
+          <td><code>global tag</code></td>
+          <td>Define the tag at the top level, Ensures documentation tools can display it properly</td>
+      </tr>
+      <tr>
+          <td><code>requestBody</code></td>
+          <td>Needed to define the payload of the request</td>
+      </tr>
+      <tr>
+          <td><code>components/schemas</code></td>
+          <td>Centralises definitions for validation and reuse</td>
+      </tr>
+  </tbody>
+</table>
+<p>To correct these issues lets replace the <code>paths</code> section with a more complete example</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/accounts</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Create account</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Creates a new account with an initial balance. The account ID is automatically generated.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">createAccount</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">requestBody</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Details of the new account</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/CreateAccountRequest&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">savings_account</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Savings account example</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">savings</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">initial_balance</span>: <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;201&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account created successfully</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/Account&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">created_account</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Created account</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">savings</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">5000</span></span></span></code></pre></div>
+<p>Also create the <code>components</code> section:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">components</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">schemas</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">CreateAccountRequest</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">required</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">type</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">initial_balance</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Type of account (e.g. checking, savings)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">initial_balance</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">number</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#ae81ff">double</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Initial deposit amount</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Account</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">account_id</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#ae81ff">uuid</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">balance</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">number</span></span></span></code></pre></div>
+<p>Create a global tag section and add the accounts tag:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Accounts endpoints</span></span></span></code></pre></div>
+<h3 id="reflection">Reflection</h3>
+<p>Why does the completeness of these sections matter?</p>
+<p>Incomplete or missing <code>responses</code> would lead to:</p>
+<ul>
+<li>No machine-readable response format</li>
+<li>Can&rsquo;t validate tests</li>
+<li>Can&rsquo;t generate mocks</li>
+</ul>
+<p><code>Schema</code> definitions enable:</p>
+<ul>
+<li>Request and mock generation in Insomnia</li>
+<li>Linting and validation against expected types</li>
+<li>SDK and client generation using tools like <code>OpenAPI</code> Generator</li>
+<li>Better documentation previews</li>
+</ul>
+<p>Without them, we would have:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Problem</th>
+          <th>Improvement</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Unclear structure</code></td>
+          <td>Enables mocks and validation</td>
+      </tr>
+      <tr>
+          <td><code>No reuse</code></td>
+          <td>Centralised schema management</td>
+      </tr>
+      <tr>
+          <td><code>No examples</code></td>
+          <td>Improves docs and auto-generated requests which aids better test coverage</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="commit-and-push-your-changes-for-the-new-endpoints">Commit and Push Your Changes for the New Endpoints</h3>
+<p>This is where <code>OpenAPI</code> becomes a contract between teams and systems, so this seems like a good point to commit our changes.
+Use the Insomnia Git commit menu:</p>
+<ol>
+<li>Click on the Git dropdown in the left sidebar.</li>
+<li>Select &ldquo;Commit&rdquo;.</li>
+<li>Inspect the changes.</li>
+<li>If happy, stage the changes.</li>
+<li>Enter a meaningful commit message: <code>feat: add /accounts endpoint and associated schemas</code></li>
+<li>Click <strong>Commit</strong>.</li>
+<li>Click <strong>Push</strong> to update your remote repository.</li>
+</ol>
+<p><a href="#R-image-f12c42f345bdd6cbc9c11c9ed19df3cc" class="lightbox-link"><img alt="<code>commit-screen-2</code>" class="lazy lightbox figure-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-commit-screen-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f12c42f345bdd6cbc9c11c9ed19df3cc"><img alt="<code>commit-screen-2</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/03-designing-an-api-specification/images/accounts-service-commit-screen-2.png"></a></p>
+<p>Now that we&rsquo;ve constructed basic endpoint in our specification and explored the importance of a complete, linted API design, we are ready to import a fully completed specification for the <code>accounts-service</code>.</p>
+<h2 id="step-6-paste-the-completed-specification">Step 6: Paste the Completed Specification</h2>
+<p>Now, paste the full final spec to finish Module 2 cleanly.</p>
+<!-- raw HTML omitted -->
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">openapi</span>: <span style="color:#ae81ff">3.0.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">info</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Accounts API</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">version</span>: <span style="color:#ae81ff">1.0.0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">This API manages account information and balances.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contact</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">email</span>: <span style="color:#ae81ff">stephen.brown@konghq.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">servers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://localhost:8081</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Local development server</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Operations related to account management (retrieval and balance updates)</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">health</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Health check endpoints for monitoring service status</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/health</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">get</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">health</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">healthCheck</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Health check endpoint</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Returns the API&#39;s health status</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;200&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">API is healthy</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">success</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Healthy response</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>: <span style="color:#e6db74">&#34;Accounts API is running&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">head</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">health</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">healthCheckHead</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Health check endpoint (HEAD)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Returns the API&#39;s health status without body</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;200&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">API is healthy</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">/accounts</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">get</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">listAccounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">List all accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Returns a list of all accounts with basic details.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;200&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">A list of accounts was successfully retrieved</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">type</span>: <span style="color:#ae81ff">array</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">items</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/Account&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">multiple_accounts</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Multiple accounts example</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    - <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">1500.00</span>
+</span></span><span style="display:flex;"><span>                    - <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;987fcdeb-51a2-43e7-89bc-765432198765&#34;</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;savings&#34;</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">5000.00</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;500&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Failed to retrieve accounts due to internal server error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">lock_error</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Database lock error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INTERNAL_ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Lock error: failed to acquire lock while listing accounts&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">createAccount</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Create a new account</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Creates a new account with an initial balance. The account ID is automatically generated.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">requestBody</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Details for the new account including type and initial balance. The account ID will be automatically generated.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/CreateAccountRequest&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">checking_account</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Create checking account</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">initial_balance</span>: <span style="color:#ae81ff">1000.00</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">savings_account</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Create savings account</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;savings&#34;</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">initial_balance</span>: <span style="color:#ae81ff">5000.00</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;201&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account created successfully</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/Account&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">new_account</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Newly created account</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">1000.00</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;400&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Failed to create account due to invalid input</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">invalid_balance</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Invalid initial balance</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INVALID_INPUT&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to create account: Initial balance must be non-negative&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;500&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Failed to create account due to internal server error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">creation_error</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Account creation failed</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INTERNAL_ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to create account: Internal server error occurred&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">/accounts/{accountId}:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">get</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">getAccountById</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Retrieve a single account</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Returns details for the specified account including current balance.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">parameters</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">accountId</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">in</span>: <span style="color:#ae81ff">path</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The UUID of the account to retrieve</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">format</span>: <span style="color:#ae81ff">uuid</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;200&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account details retrieved successfully</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/Account&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">checking_account</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Example checking account</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">1500.00</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;404&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account lookup failed - specified account ID does not exist</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">not_found</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Account not found error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to retrieve account: ID 123e4567-e89b-12d3-a456-426614174000 not found&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;500&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Failed to retrieve account details due to internal server error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">server_error</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Internal server error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INTERNAL_ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to retrieve account: Internal server error occurred&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">/accounts/{accountId}/debit:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">debitAccount</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Debit an account</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Decreases the account&#39;s balance by the specified amount.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">parameters</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">accountId</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">in</span>: <span style="color:#ae81ff">path</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The UUID of the account to debit</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">format</span>: <span style="color:#ae81ff">uuid</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">requestBody</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Specifies the amount to debit from the account balance.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/UpdateBalanceRequest&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">small_debit</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Small debit amount</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">amount</span>: <span style="color:#ae81ff">100.00</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">large_debit</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Large debit amount</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">amount</span>: <span style="color:#ae81ff">1000.00</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;200&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account debited successfully</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/Account&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">successful_debit</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Account after successful debit</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">900.00</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;400&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Debit operation failed due to insufficient funds or invalid amount</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">insufficient_funds</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Insufficient funds error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INSUFFICIENT_FUNDS&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to debit account: Insufficient funds - balance is 900.00, attempted to debit 1000.00&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;404&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Debit operation failed - account not found</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">not_found</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Account not found</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to debit account: Account does not exist&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;500&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Failed to process debit operation due to internal server error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">server_error</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Internal error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INTERNAL_ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to debit account: Internal server error occurred&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">/accounts/{accountId}/credit:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">operationId</span>: <span style="color:#ae81ff">creditAccount</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Credit an account</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Increases the account&#39;s balance by the specified amount.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">parameters</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">accountId</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">in</span>: <span style="color:#ae81ff">path</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The UUID of the account to credit</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">format</span>: <span style="color:#ae81ff">uuid</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">requestBody</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Specifies the amount to credit to the account balance.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/UpdateBalanceRequest&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">small_credit</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Small credit amount</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">amount</span>: <span style="color:#ae81ff">500.00</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">large_credit</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Large credit amount</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">amount</span>: <span style="color:#ae81ff">5000.00</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">responses</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;200&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Account credited successfully</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/Account&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">successful_credit</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Account after successful credit</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">2000.00</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;400&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Credit operation failed due to invalid amount</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">invalid_amount</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Invalid amount error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INVALID_INPUT&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to credit account: Amount must be positive&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;404&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Credit operation failed - account not found</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">not_found</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Account not found</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to credit account: Account does not exist&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#39;500&#39;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Failed to process credit operation due to internal server error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">examples</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">server_error</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Internal error</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">value</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;INTERNAL_ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;Failed to credit account: Internal server error occurred&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">components</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">schemas</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Account</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Represents a bank account with its core details including ID, type, and current balance.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">example</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">account_id</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">balance</span>: <span style="color:#ae81ff">1500.00</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">account_id</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#ae81ff">uuid</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Unique identifier for the account (UUID v4)</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;123e4567-e89b-12d3-a456-426614174000&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The type of the account (e.g., checking, savings)</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">balance</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">number</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#ae81ff">double</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The current balance of the account in the account&#39;s currency</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#ae81ff">1500.00</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">CreateAccountRequest</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Request payload for creating a new account.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">example</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;savings&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">initial_balance</span>: <span style="color:#ae81ff">5000.00</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">required</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">type</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">initial_balance</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The type of account to create (e.g., checking, savings)</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;savings&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">initial_balance</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">number</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#ae81ff">double</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The initial balance to fund the account with</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#ae81ff">5000.00</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">UpdateBalanceRequest</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Request payload for updating an account&#39;s balance via credit or debit operations.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">example</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">amount</span>: <span style="color:#ae81ff">100.00</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">required</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">amount</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">amount</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">number</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">format</span>: <span style="color:#ae81ff">double</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">The amount to credit or debit from the account</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#ae81ff">100.00</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ErrorResponse</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Standard error response structure for all error cases.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">example</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">error_code</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;The requested account does not exist.&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">required</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">error_code</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">message</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">error_code</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">A standardized error code identifying the type of error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">enum</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">INTERNAL_ERROR</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">NOT_FOUND</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">INSUFFICIENT_FUNDS</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">INVALID_INPUT</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">message</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">description</span>: <span style="color:#ae81ff">A human-readable description of the error</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">example</span>: <span style="color:#e6db74">&#34;The requested account does not exist.&#34;</span></span></span></code></pre></div>
+<!-- raw HTML omitted -->
+<p>This ensures your design document is complete, Spectral-compliant, and production-ready.</p>
+<h3 id="endpoint-overview">Endpoint Overview</h3>
+<p>Here is what each endpoint in the spec is responsible for:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/health</code></td>
+          <td>GET</td>
+          <td>Returns basic availability and health of the service</td>
+      </tr>
+      <tr>
+          <td><code>/health</code></td>
+          <td>HEAD</td>
+          <td>Same as GET but with no response body</td>
+      </tr>
+      <tr>
+          <td><code>/accounts</code></td>
+          <td>GET</td>
+          <td>Lists all registered accounts</td>
+      </tr>
+      <tr>
+          <td><code>/accounts</code></td>
+          <td>POST</td>
+          <td>Creates a new account with an initial balance</td>
+      </tr>
+      <tr>
+          <td><code>/accounts/{accountId}</code></td>
+          <td>GET</td>
+          <td>Fetches full account details by ID</td>
+      </tr>
+      <tr>
+          <td><code>/accounts/{accountId}/debit</code></td>
+          <td>POST</td>
+          <td>Deducts funds from the specified account</td>
+      </tr>
+      <tr>
+          <td><code>/accounts/{accountId}/credit</code></td>
+          <td>POST</td>
+          <td>Adds funds to the specified account</td>
+      </tr>
+  </tbody>
+</table>
+<p>All endpoints are fully documented with:</p>
+<ul>
+<li>summary, description, <code>operationId</code>, and tags</li>
+<li>Schemas referenced using <code>$ref</code> to reduce duplication</li>
+<li>Structured error handling for 4xx and 5xx cases</li>
+<li>Inline and reusable examples for request and response content</li>
+</ul>
+<h3 id="final-commit-and-push">Final Commit and Push</h3>
+<p>Use the Insomnia Git commit menu:</p>
+<ol>
+<li>Click on the Git dropdown in the left sidebar.</li>
+<li>Select &ldquo;Commit&rdquo;.</li>
+<li>Inspect the changes.</li>
+<li>If happy, stage the changes.</li>
+<li>Enter a meaningful commit message: <code>chore: paste completed Accounts API specification</code></li>
+<li>Click <strong>Commit</strong>.</li>
+<li>Click <strong>Push</strong> to update your remote repository.</li>
+</ol>
+<p>After reviewing your changes, create a pull request from your feature branch into main. Once approved, merge your branch to keep the main branch up-to-date with your completed work.</p>
+<h2 id="summary">Summary</h2>
+<p>You have now:</p>
+<ul>
+<li>Created a Git-backed <code>OpenAPI</code> spec in Insomnia</li>
+<li>Built the <code>/accounts</code> endpoint with proper structure</li>
+<li>Resolved all linter warnings</li>
+<li>Committed your changes at logical milestones</li>
+</ul>
+<p>You are ready to move on!</p>
+<p><strong>Next:</strong> In <code>Module 3: Collections</code>, we&rsquo;ll use this complete specification to generate a request collection.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">APIOps with Kong Konnect and Insomnia</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/01-insomnia-overview/index.html"><a class="padding" href="/01-insomnia-overview/index.html">Insomnia Overview</a></li>
+            <li class="" data-nav-id="/02-project-setup-and-git-integration/index.html"><a class="padding" href="/02-project-setup-and-git-integration/index.html">Project Setup and Git Integration</a></li>
+            <li class="active " data-nav-id="/03-designing-an-api-specification/index.html"><a class="padding" href="/03-designing-an-api-specification/index.html">Building the API Specification</a></li>
+            <li class="" data-nav-id="/04-collections/index.html"><a class="padding" href="/04-collections/index.html">Collections and Scripting</a></li>
+            <li class="" data-nav-id="/05-testing/index.html"><a class="padding" href="/05-testing/index.html">Creating Test Suites and Extending the Specification</a></li>
+            <li class="" data-nav-id="/06-custom-linting/index.html"><a class="padding" href="/06-custom-linting/index.html">Custom Linting with Spectral in Insomnia</a></li>
+            <li class="" data-nav-id="/07-cicd-testing/index.html"><a class="padding" href="/07-cicd-testing/index.html">CI/CD Testing with Inso CLI</a></li>
+            <li class="" data-nav-id="/08-mocking/index.html"><a class="padding" href="/08-mocking/index.html">Mocking</a></li>
+            <li class="" data-nav-id="/09-secrets-and-secure-collaboration/index.html"><a class="padding" href="/09-secrets-and-secure-collaboration/index.html">Secrets and Secure Collaboration</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1754681639" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754681639" defer></script>
+    <script src="/js/theme.js?1754681639" defer></script>
+  </body>
+</html>

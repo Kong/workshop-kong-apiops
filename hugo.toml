@@ -1,7 +1,9 @@
 theme = 'hugo-theme-relearn'
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'APIOps with Kong Konnect and Insomnia'
 [module]
   [[module.imports]]
     path = 'github.com/McShelby/hugo-theme-relearn'
+[params]
+  themeVariant = "blue"
