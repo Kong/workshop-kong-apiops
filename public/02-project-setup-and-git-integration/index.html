@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Welcome to the Insomnia Workshop.
+In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.
+This first module focuses on setting up your project using Git integration with Insomnia v11.
+About This Workshop You will be working with a Git-backed API specification project for the kong-bank Accounts API. The template repository for this service is hosted on your organisation’s GitHub Enterprise instance and will be referenced throughout this workshop as:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Project Setup and Git Integration :: APIOps with Kong Konnet and Insomnia">
+    <meta name="twitter:description" content="Welcome to the Insomnia Workshop.
+In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.
+This first module focuses on setting up your project using Git integration with Insomnia v11.
+About This Workshop You will be working with a Git-backed API specification project for the kong-bank Accounts API. The template repository for this service is hosted on your organisation’s GitHub Enterprise instance and will be referenced throughout this workshop as:">
+    <meta property="og:url" content="http://localhost:1313/02-project-setup-and-git-integration/index.html">
+    <meta property="og:site_name" content="APIOps with Kong Konnet and Insomnia">
+    <meta property="og:title" content="Project Setup and Git Integration :: APIOps with Kong Konnet and Insomnia">
+    <meta property="og:description" content="Welcome to the Insomnia Workshop.
+In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.
+This first module focuses on setting up your project using Git integration with Insomnia v11.
+About This Workshop You will be working with a Git-backed API specification project for the kong-bank Accounts API. The template repository for this service is hosted on your organisation’s GitHub Enterprise instance and will be referenced throughout this workshop as:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Project Setup and Git Integration :: APIOps with Kong Konnet and Insomnia">
+    <meta itemprop="description" content="Welcome to the Insomnia Workshop.
+In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.
+This first module focuses on setting up your project using Git integration with Insomnia v11.
+About This Workshop You will be working with a Git-backed API specification project for the kong-bank Accounts API. The template repository for this service is hosted on your organisation’s GitHub Enterprise instance and will be referenced throughout this workshop as:">
+    <meta itemprop="wordCount" content="1271">
+    <title>Project Setup and Git Integration :: APIOps with Kong Konnet and Insomnia</title>
+    <link href="/02-project-setup-and-git-integration/index.xml" rel="alternate" type="application/rss+xml" title="Project Setup and Git Integration :: APIOps with Kong Konnet and Insomnia">
+    <link href="/css/auto-complete/auto-complete.min.css?1754657661" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1754657661" defer></script>
+    <script src="/js/search-lunr.js?1754657661" defer></script>
+    <script src="/js/search.js?1754657661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1754657661";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1754657661" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1754657661" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1754657661" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1754657661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754657661" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754657661" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754657661" rel="stylesheet">
+    <link href="/css/theme.css?1754657661" rel="stylesheet">
+    <link href="/css/format-html.css?1754657661" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/02-project-setup-and-git-integration\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/02-project-setup-and-git-integration/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#about-this-workshop">About This Workshop</a></li>
+    <li><a href="#before-you-begin">Before You Begin</a></li>
+    <li><a href="#step-1-create-your-repository-from-the-template">Step 1: Create Your Repository from the Template</a>
+      <ul>
+        <li><a href="#docker-compose-configuration">Docker Compose Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-open-insomnia-and-sign-in">Step 2: Open Insomnia and Sign In</a></li>
+    <li><a href="#step-3-add-a-git-backed-project">Step 3: Add a Git-Backed Project</a>
+      <ul>
+        <li><a href="#how-insomnia-handles-project-metadata-v11">How Insomnia Handles Project Metadata (v11)</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-4-working-with-git-in-insomnia">Step 4: Working with Git in Insomnia</a>
+      <ul>
+        <li><a href="#git-operations-menu">Git Operations Menu</a></li>
+        <li><a href="#managing-branches">Managing Branches</a></li>
+        <li><a href="#committing-and-pushing-changes">Committing and Pushing Changes</a></li>
+        <li><a href="#pulling-changes-from-collaborators">Pulling Changes from Collaborators</a></li>
+        <li><a href="#disconnect-from-git-if-needed">Disconnect from Git (if needed)</a></li>
+        <li><a href="#additional-project-options">Additional Project Options</a></li>
+        <li><a href="#prepare-a-feature-branch-for-module-02">Prepare a Feature Branch for Module 02</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Project Setup and Git Integration</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/01-insomnia-overview/index.html" title="Insomnia Overview (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/03-designing-an-api-specification/index.html" title="Building the API Specification (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 02-project-setup-and-git-integration" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="project-setup-and-git-integration">Project Setup and Git Integration</h1>
+
+<p>Welcome to the Insomnia Workshop.</p>
+<p>In this course, we will work through the design, testing, and automation of an <code>OpenAPI</code> specification using <code>Insomnia</code> and the <code>Inso CLI</code>. All work will be managed via Git from the start, following best practice for collaborative API development.</p>
+<p>This first module focuses on setting up your project using Git integration with Insomnia v11.</p>
+<h2 id="about-this-workshop">About This Workshop</h2>
+<p>You will be working with a Git-backed API specification project for the <code>kong-bank</code> Accounts API. The template repository for this service is hosted on your organisation&rsquo;s GitHub Enterprise instance and will be referenced throughout this workshop as:</p>
+<p><code>https://github.com/konghq-cx/accounts-service.git</code></p>
+<blockquote>
+<p>Note: <code>https://github.com/konghq-cx</code> is the address for the public version of this repository, if your company uses an enterprise git offering then this address will be updated in the course notes.</p></blockquote>
+<p>This repository contains:</p>
+<ul>
+<li>A ready-made implementation of the accounts service, written in Python.</li>
+<li>A docker-compose.yaml file for launching a local version of the service</li>
+</ul>
+<p>You will build up a specification and its associated tests for the <code>accounts-service</code> throughout the course.</p>
+<h2 id="before-you-begin">Before You Begin</h2>
+<p>Ensure you have the following installed:</p>
+<ul>
+<li>Insomnia v11</li>
+<li>docker and docker-compose</li>
+<li>Access to your company&rsquo;s GitHub Enterprise</li>
+</ul>
+<h2 id="step-1-create-your-repository-from-the-template">Step 1: Create Your Repository from the Template</h2>
+<p>First, locate the template repository at:</p>
+<p><code>https://github.com/konghq-cx/accounts-service.git</code></p>
+<blockquote>
+<p>Note: <code>https://github.com/konghq-cx</code> is the address for the public version of this repository, if your company uses an enterprise git offering then this address will be updated in the course notes.</p></blockquote>
+<p>Create your own repository from this template by:</p>
+<ol>
+<li>Navigate to the template repository in your browser</li>
+<li>Click on &ldquo;Use this template&rdquo; or &ldquo;Generate from template&rdquo; (the exact wording may vary based on your GitHub Enterprise setup)</li>
+<li>Name your new repository following the convention of adding your initials to the end:</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>accounts-service-&lt;your-initials&gt;</span></span></code></pre></div>
+<p>For example: <code>accounts-service-sb</code> if your initials are SB
+4. Complete the repository creation process</p>
+<p>Now clone your new repository locally:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/konghq-cx/accounts-service-&lt;your-initials&gt;.git
+</span></span><span style="display:flex;"><span>cd accounts-service-&lt;your-initials&gt;</span></span></code></pre></div>
+<blockquote>
+<p>Note: <code>https://github.com/konghq-cx</code> is the address for the public version of this repository, if your company uses an enterprise git offering then this address will be updated in the course notes.</p></blockquote>
+<h3 id="docker-compose-configuration">Docker Compose Configuration</h3>
+<p>Inside this repo, you will find a <code>docker-compose.yaml</code> file. This file can be used to start and stop the <code>accounts-service</code> implementation.</p>
+<p>While Kong typically recommends a <strong>specification-first</strong> approach to API development, the goal of this workshop is to focus on exploring and understanding the features of <strong>Insomnia</strong>. For that reason, having a working API implementation allows us to more effectively demonstrate those features in action. This <code>docker-compose</code> file exposes a working implementation of the <code>accounts-service</code> locally.</p>
+<p>The service is started using a Docker Compose file, which looks like the following:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">accounts-service</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">kongcx/accounts-service:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">accounts</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8081:8081&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">LOG_LEVEL=info</span></span></span></code></pre></div>
+<p>As shown, this configuration is simple — it runs the container image and exposes the service on port 8081.</p>
+<p>Please start the service locally:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose up -d</span></span></code></pre></div>
+<p>Images are hosted in your internal container registry. If you are properly authenticated, the image should pull successfully.</p>
+<h2 id="step-2-open-insomnia-and-sign-in">Step 2: Open Insomnia and Sign In</h2>
+<ol>
+<li>Open Insomnia v11.</li>
+<li>Sign in using your company email address.</li>
+<li>You will be redirected to your company&rsquo;s IDP for SSO (OIDC).</li>
+<li>Once authenticated, Insomnia will redirect you back to the application.</li>
+</ol>
+<h2 id="step-3-add-a-git-backed-project">Step 3: Add a Git-Backed Project</h2>
+<p>Insomnia Git projects require an existing remote repository.</p>
+<p>To add the accounts-service as a Git-backed project:</p>
+<ol>
+<li>Click the + (plus) button in the Projects panel.</li>
+<li>Choose &ldquo;Git-Sync&rdquo;.</li>
+<li>Set name for the project e.g. <code>accounts-service-&lt;your-initials&gt;</code></li>
+<li>Click next
+<a href="#R-image-b630ea023d481c829c627c3cd95eac9b" class="lightbox-link"><img alt="create-git-project" class="lazy lightbox figure-image" loading="lazy" src="./images/create-git-project.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b630ea023d481c829c627c3cd95eac9b"><img alt="create-git-project" class="lazy lightbox lightbox-image" loading="lazy" src="./images/create-git-project.png"></a></li>
+<li>Select the repository from the dropdown when it appears.
+<ul>
+<li>If the repository does not appear you may need to authorise Insomnia to you GitHub organisation</li>
+<li>If this happens you can click on the <code>Can't find a repository? Configure the App</code> link, which will take you off to GitHub to authorise Insomnia
+<a href="#R-image-b7feedf96b0323c77d126c6e8f11a301" class="lightbox-link"><img alt="select-git-project" class="lazy lightbox figure-image" loading="lazy" src="./images/select-git-project.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b7feedf96b0323c77d126c6e8f11a301"><img alt="select-git-project" class="lazy lightbox lightbox-image" loading="lazy" src="./images/select-git-project.png"></a></li>
+</ul>
+</li>
+<li>You will see a message indicating that no existing Insomnia files were found:</li>
+</ol>
+<blockquote>
+<p>This is expected as we have not yet added an Insomnia metadata to this project.
+We will create these the next few modules as we create our <code>OpenAPI</code> specification, collections and tests.</p></blockquote>
+<p><a href="#R-image-cdc3e705ab06d06367f69eba517fb5dd" class="lightbox-link"><img alt="<code>no-insomnia-files</code>" class="lazy lightbox figure-image" loading="lazy" src="./images/no-insomnia-files.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cdc3e705ab06d06367f69eba517fb5dd"><img alt="<code>no-insomnia-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="./images/no-insomnia-files.png"></a></p>
+<h3 id="how-insomnia-handles-project-metadata-v11">How Insomnia Handles Project Metadata (v11)</h3>
+<p>In Insomnia v11, metadata such as collections, test scripts, environments, and design documents are no longer stored in a separate <code>.insomnia</code> directory.</p>
+<p>Instead:</p>
+<ul>
+<li>All metadata is embedded directly into your <code>OpenAPI</code> spec file.</li>
+<li>This simplifies syncing and collaboration using Git.</li>
+<li>Insomnia recognises the spec via OAS annotations and internal metadata blocks.</li>
+</ul>
+<h2 id="step-4-working-with-git-in-insomnia">Step 4: Working with Git in Insomnia</h2>
+<p>With Git Sync configured, Insomnia provides powerful Git integration features directly within the interface. These tools allow teams to collaborate on shared API projects while maintaining clean version control and visibility into changes.</p>
+<h3 id="git-operations-menu">Git Operations Menu</h3>
+<p>Use the <strong>Git Sync</strong> menu (found in the left-hand sidebar) to:
+<a href="#R-image-19994893a05a03da3de4c6a260a6b3c5" class="lightbox-link"><img alt="<code>git-menu-access</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/access-to-git-menu-and-menu.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-19994893a05a03da3de4c6a260a6b3c5"><img alt="<code>git-menu-access</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/access-to-git-menu-and-menu.png"></a></p>
+<ul>
+<li>View commit history</li>
+<li>Create and switch between branches</li>
+<li>Pull updates from collaborators</li>
+<li>Commit and push your own changes</li>
+</ul>
+<h3 id="managing-branches">Managing Branches</h3>
+<p>Maintaining good Git hygiene is essential when working in a collaborative environment. You should:</p>
+<ul>
+<li>Use <strong>feature branches</strong> to isolate your work</li>
+<li>Create <strong>pull requests</strong> to support code review and approvals</li>
+</ul>
+<p>From the Git menu, you can:</p>
+<ul>
+<li>Create new branches locally</li>
+<li>Switch between local and remote branches
+<blockquote>
+<p><em>Note: Remote branches will only appear after they&rsquo;ve been pushed or fetched at least once.</em></p></blockquote>
+</li>
+</ul>
+<p><a href="#R-image-87b0c278f960d6ac6b092b9fd6a9b661" class="lightbox-link"><img alt="<code>git-branch-management</code>" class="lazy lightbox figure-image" loading="lazy" src="./images/git-branch-management.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-87b0c278f960d6ac6b092b9fd6a9b661"><img alt="<code>git-branch-management</code>" class="lazy lightbox lightbox-image" loading="lazy" src="./images/git-branch-management.png"></a></p>
+<h3 id="committing-and-pushing-changes">Committing and Pushing Changes</h3>
+<p>To commit:</p>
+<ol>
+<li>Click the <strong>Git</strong> dropdown and select <strong>Commit</strong></li>
+<li>Inspect the diffs of any proposed changes</li>
+<li>Stage any changes you want to commit</li>
+<li>Enter a meaningful, descriptive commit message</li>
+</ol>
+<p>To push:</p>
+<ol>
+<li>Click <strong>Push</strong> in the same Git menu</li>
+<li>On first push, Insomnia will initialise metadata in the spec file</li>
+</ol>
+<p><a href="#R-image-31e69b2d0129d403e6f7525911339d56" class="lightbox-link"><img alt="<code>git-commit-menu</code>" class="lazy lightbox figure-image" loading="lazy" src="./images/git-commit-and-push.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-31e69b2d0129d403e6f7525911339d56"><img alt="<code>git-commit-menu</code>" class="lazy lightbox lightbox-image" loading="lazy" src="./images/git-commit-and-push.png"></a></p>
+<h3 id="pulling-changes-from-collaborators">Pulling Changes from Collaborators</h3>
+<p>When teammates push updates to the shared repo, you can stay in sync by:</p>
+<ol>
+<li>Opening the Git Sync menu</li>
+<li>Selecting <strong>Pull</strong></li>
+</ol>
+<p>This will merge their changes into your local project.</p>
+<h3 id="disconnect-from-git-if-needed">Disconnect from Git (if needed)</h3>
+<p>To sign out of your Git account:</p>
+<ol>
+<li>Go to <strong>Setup Git Sync</strong></li>
+<li>Open <strong>Repository Settings</strong></li>
+<li>Click <strong>Sign Out</strong> next to your listed Git account</li>
+</ol>
+<h3 id="additional-project-options">Additional Project Options</h3>
+<h4 id="rename-your-project-local-only">Rename Your Project (Local Only)</h4>
+<ol>
+<li>Open <strong>Project Settings</strong></li>
+<li>Update the name and click <strong>Save</strong></li>
+</ol>
+<blockquote>
+<p>Note: The project name is stored locally and is not synced to Git.</p></blockquote>
+<h4 id="delete-a-git-backed-project">Delete a Git-Backed Project</h4>
+<p>To delete a project from Insomnia:</p>
+<ol>
+<li>From the project list, open <strong>Project Settings</strong></li>
+<li>Click <strong>Delete Project</strong></li>
+<li>Confirm deletion
+<blockquote>
+<p><strong>Warning:</strong> This removes the project from Insomnia but <strong>does not</strong> delete the remote Git repository.</p></blockquote>
+</li>
+</ol>
+<h3 id="prepare-a-feature-branch-for-module-02">Prepare a Feature Branch for Module 02</h3>
+<p>Now that your Git project is connected, we are ready to set up good Git practices for the rest of the workshop.</p>
+<p>Before starting <strong>Module 02</strong>, create a new Git branch that will hold all your work for that module.</p>
+<blockquote>
+<p><strong>Why?</strong>
+In real-world API development, it&rsquo;s common to work in isolated feature branches for each change or improvement.
+In this workshop, we will mirror that practice:</p>
+<ul>
+<li>Each module will have its own branch</li>
+<li>This keeps changes clean, isolated, and easy to manage</li>
+<li>It prepares you for collaborating through pull requests or merge reviews</li>
+</ul></blockquote>
+<p>You only need to do this once at the end of Module 01 — each later module will remind you when it&rsquo;s time to create a new branch.</p>
+<h4 id="suggested-branch-name">Suggested branch name</h4>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>feature/api-spec-design</span></span></code></pre></div>
+<p>To create it:</p>
+<ol>
+<li>Open the Git Sync menu
+<a href="#R-image-d37d265cac7198da53dbc765145b8083" class="lightbox-link"><img alt="select-git-menu" class="lazy lightbox figure-image" loading="lazy" src="./images/select-git-menu.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d37d265cac7198da53dbc765145b8083"><img alt="select-git-menu" class="lazy lightbox lightbox-image" loading="lazy" src="./images/select-git-menu.png"></a></li>
+<li>Click <strong>Branches</strong></li>
+<li>Type the branch name and click <strong>Create</strong>
+<a href="#R-image-07a0bd17b9df6c9953105cf05d6b394f" class="lightbox-link"><img alt="git-branch-menu" class="lazy lightbox figure-image" loading="lazy" src="./images/git-branch-menu.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-07a0bd17b9df6c9953105cf05d6b394f"><img alt="git-branch-menu" class="lazy lightbox lightbox-image" loading="lazy" src="./images/git-branch-menu.png"></a></li>
+<li>Insomnia will automatically switch to the new branch</li>
+</ol>
+<p>You&rsquo;ll now be ready to begin designing and testing the API in the next module.</p>
+<h2 id="summary">Summary</h2>
+<p>You have now:</p>
+<ul>
+<li>Cloned and run the accounts-service locally</li>
+<li>Set up a Git-synced project in Insomnia</li>
+<li>Learned how metadata is stored in Insomnia v11</li>
+<li>Explored Git operations and branch management inside the Insomnia app</li>
+</ul>
+<p>You are now ready to begin working on the API specification itself.</p>
+<p>Next: <code>Module 2: Designing an API Spec</code></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">APIOps with Kong Konnet and Insomnia</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/01-insomnia-overview/index.html"><a class="padding" href="/01-insomnia-overview/index.html">Insomnia Overview</a></li>
+            <li class="active " data-nav-id="/02-project-setup-and-git-integration/index.html"><a class="padding" href="/02-project-setup-and-git-integration/index.html">Project Setup and Git Integration</a></li>
+            <li class="" data-nav-id="/03-designing-an-api-specification/index.html"><a class="padding" href="/03-designing-an-api-specification/index.html">Building the API Specification</a></li>
+            <li class="" data-nav-id="/04-collections/index.html"><a class="padding" href="/04-collections/index.html">Collections and Scripting</a></li>
+            <li class="" data-nav-id="/05-testing/index.html"><a class="padding" href="/05-testing/index.html">Creating Test Suites and Extending the Specification</a></li>
+            <li class="" data-nav-id="/06-custom-linting/index.html"><a class="padding" href="/06-custom-linting/index.html">Custom Linting with Spectral in Insomnia</a></li>
+            <li class="" data-nav-id="/07-cicd-testing/index.html"><a class="padding" href="/07-cicd-testing/index.html">CI/CD Testing with Inso CLI</a></li>
+            <li class="" data-nav-id="/08-mocking/index.html"><a class="padding" href="/08-mocking/index.html">Mocking</a></li>
+            <li class="" data-nav-id="/09-secrets-and-secure-collaboration/index.html"><a class="padding" href="/09-secrets-and-secure-collaboration/index.html">Secrets and Secure Collaboration</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1754657661" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754657661" defer></script>
+    <script src="/js/theme.js?1754657661" defer></script>
+  </body>
+</html>

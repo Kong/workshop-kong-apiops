@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="Module 00: Insomnia Overview Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.
+With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.
+What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Module 00: Insomnia Overview Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.
+With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.
+What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:">
+    <meta property="og:url" content="http://localhost:1313/00-01-insomnia-overview-readme/index.html">
+    <meta property="og:site_name" content="APIOps with Kong Konnet and Insomnia">
+    <meta property="og:description" content="Module 00: Insomnia Overview Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.
+With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.
+What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="APIOps with Kong Konnet and Insomnia">
+    <meta itemprop="description" content="Module 00: Insomnia Overview Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.
+With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.
+What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:">
+    <meta itemprop="wordCount" content="1062">
+    <title></title>
+    <link href="/css/auto-complete/auto-complete.min.css?1754656900" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1754656900" defer></script>
+    <script src="/js/search-lunr.js?1754656900" defer></script>
+    <script src="/js/search.js?1754656900" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1754656900";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1754656900" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1754656900" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1754656900" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1754656900" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754656900" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754656900" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754656900" rel="stylesheet">
+    <link href="/css/theme.css?1754656900" rel="stylesheet">
+    <link href="/css/format-html.css?1754656900" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/00-01-insomnia-overview-readme\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/00-01-insomnia-overview-readme/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#what-insomnia-offers">What Insomnia Offers</a></li>
+    <li><a href="#insomnia-supports-3-vital-stages-of-api-development">Insomnia Supports 3 Vital Stages of API Development</a></li>
+    <li><a href="#insomnia-accelerates-deployment">Insomnia Accelerates Deployment</a></li>
+    <li><a href="#two-tools-desktop-app--inso-cli">Two Tools: Desktop App + <code>Inso CLI</code></a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#getting-started-with-insomnia">Getting Started with Insomnia</a>
+      <ul>
+        <li><a href="#key-benefits-of-logging-in">Key Benefits of Logging In</a></li>
+      </ul>
+    </li>
+    <li><a href="#enterprise-features-overview">Enterprise Features Overview</a></li>
+    <li><a href="#insomnia-layout-ide-structure">Insomnia Layout: IDE Structure</a>
+      <ul>
+        <li><a href="#spec-tab">Spec Tab</a></li>
+        <li><a href="#collections-tab">Collections Tab</a></li>
+        <li><a href="#tests-tab">Tests Tab</a></li>
+      </ul>
+    </li>
+    <li><a href="#insomnia-environments">Insomnia Environments</a>
+      <ul>
+        <li><a href="#why-environments-matter">Why Environments Matter</a></li>
+        <li><a href="#types-of-environments-in-insomnia">Types of Environments in Insomnia</a></li>
+        <li><a href="#how-environments-are-used">How Environments Are Used</a></li>
+        <li><a href="#automatic-environment-generation-from-openapi-specs">Automatic Environment Generation from <code>OpenAPI</code> Specs</a></li>
+        <li><a href="#working-with-multiple-environments">Working with Multiple Environments</a></li>
+        <li><a href="#security-considerations">Security Considerations</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#next-module-begin-api-design">Next Module: Begin API Design</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnet and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/index.html" title="APIOps with Kong Konnet and Insomnia (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/00-insomnia-overview/index.html" title="00-Insomnia-Overviews (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable page" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id=""></h1>
+
+<h1 id="module-00-insomnia-overview">Module 00: Insomnia Overview</h1>
+<p>Insomnia is a collaborative <strong>integrated development environment (IDE)</strong> designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.</p>
+<p>With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you&rsquo;re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.</p>
+<h2 id="what-insomnia-offers">What Insomnia Offers</h2>
+<p>Insomnia provides a user-friendly interface that allows developers to:</p>
+<ul>
+<li><strong>Create and edit <code>OpenAPI</code> specifications</strong></li>
+<li><strong>Send requests to <code>REST</code>, <code>SOAP</code>, <code>GraphQL</code>, and <code>gRPC</code> APIs</strong></li>
+<li><strong>Inspect live responses</strong></li>
+<li><strong>Write complex test suites</strong> for manual or automated testing</li>
+<li><strong>Work across multiple environments</strong>, including local, test, staging, and production</li>
+<li><strong>Automate workflows</strong> with a powerful CLI (<code>Inso CLI</code>)</li>
+</ul>
+<p><a href="#R-image-5de496e55ff25c673766a6ceae7daa7b" class="lightbox-link"><img alt="lifecycle-1" class="lazy lightbox figure-image" loading="lazy" src="./images/api-lifecycle-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5de496e55ff25c673766a6ceae7daa7b"><img alt="lifecycle-1" class="lazy lightbox lightbox-image" loading="lazy" src="./images/api-lifecycle-1.png"></a></p>
+<h2 id="insomnia-supports-3-vital-stages-of-api-development">Insomnia Supports 3 Vital Stages of API Development</h2>
+<ol>
+<li>
+<p><strong>Design</strong></p>
+<ul>
+<li>Build your API specification with linting and instant feedback.</li>
+<li>Visual editing of <code>OpenAPI</code> specs via the spec editor.</li>
+</ul>
+</li>
+<li>
+<p><strong>Debug</strong></p>
+<ul>
+<li>Send test requests and inspect responses.</li>
+<li>Supports <code>REST</code>, <code>SOAP</code>, <code>gRPC</code>, and <code>GraphQL</code>.</li>
+<li>No need for separate tooling.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test</strong></p>
+<ul>
+<li>Write test suites based on your collection of requests.</li>
+<li>Automate those tests in <code>CI/CD</code> pipelines using the <code>Inso CLI</code>.</li>
+</ul>
+</li>
+</ol>
+<p><a href="#R-image-5b21a28133166f861cb7a829ecbe6711" class="lightbox-link"><img alt="<code>lifecycle-2</code>" class="lazy lightbox figure-image" loading="lazy" src="./images/api-lifecycle-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b21a28133166f861cb7a829ecbe6711"><img alt="<code>lifecycle-2</code>" class="lazy lightbox lightbox-image" loading="lazy" src="./images/api-lifecycle-2.png"></a></p>
+<h2 id="insomnia-accelerates-deployment">Insomnia Accelerates Deployment</h2>
+<p>Insomnia helps speed up the deployment process by converting <code>OpenAPI</code> specs directly into:</p>
+<ul>
+<li>Kubernetes Custom Resource Definitions (CRDs)</li>
+<li>Kong Gateway declarative configuration files</li>
+</ul>
+<p>This means your design can go straight from spec to runtime with minimal friction.</p>
+<p><a href="#R-image-8c31895323469ce6a36bed0d48ff5907" class="lightbox-link"><img alt="<code>end2end-1</code>" class="lazy lightbox figure-image" loading="lazy" src="./images/api-ops-highlevel.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8c31895323469ce6a36bed0d48ff5907"><img alt="<code>end2end-1</code>" class="lazy lightbox lightbox-image" loading="lazy" src="./images/api-ops-highlevel.png"></a></p>
+<h2 id="two-tools-desktop-app--inso-cli">Two Tools: Desktop App + <code>Inso CLI</code></h2>
+<p>Insomnia comes in two forms:</p>
+<ul>
+<li><strong>Desktop App</strong>: A powerful GUI interface for designing and debugging APIs.</li>
+<li><strong><code>Inso CLI</code></strong>: A command-line interface used to automate tasks as part of your <code>CI/CD</code> or <code>APIOps</code> pipeline.</li>
+</ul>
+<p>In this workshop, we will cover both.</p>
+<h3 id="installation">Installation</h3>
+<p>Install both tools from your organisation&rsquo;s software centre or from the official download pages:</p>
+<ul>
+<li>Desktop: <a href="https://insomnia.rest/download" rel="external" target="_blank">https://insomnia.rest/download</a></li>
+<li><code>Inso CLI</code>: <a href="https://docs.insomnia.rest/inso-cli/introduction" rel="external" target="_blank">https://docs.insomnia.rest/inso-cli/introduction</a></li>
+</ul>
+<h2 id="getting-started-with-insomnia">Getting Started with Insomnia</h2>
+<p>While Insomnia can be used in local or scratchpad mode, we recommend creating an account and logging in to access the full suite of features:</p>
+<h3 id="key-benefits-of-logging-in">Key Benefits of Logging In</h3>
+<ul>
+<li>Manage and switch between multiple projects</li>
+<li>Enable Git Sync for collaborative workflows</li>
+<li>Secure access with <strong>SSO (OIDC/SAML)</strong> for enterprise users</li>
+<li>Gain access to advanced enterprise features</li>
+</ul>
+<h2 id="enterprise-features-overview">Enterprise Features Overview</h2>
+<p>Enterprise customers have access to additional powerful features:</p>
+<ul>
+<li><strong>Organisations</strong>: Group related projects and teams</li>
+<li><strong>Git Sync</strong>: Full version control and team collaboration</li>
+<li><strong><code>RBAC</code></strong>: Role-based access control</li>
+<li><strong>Custom Spectral Linting</strong></li>
+<li><strong>Mocking</strong> (Cloud &amp; Self-hosted)</li>
+<li><strong>Secrets Management</strong> via:
+<ul>
+<li>HashiCorp Vault (HCV)</li>
+<li>AWS Secrets Manager</li>
+<li>Azure Key Vault</li>
+<li>GCP Secret Manager</li>
+</ul>
+</li>
+</ul>
+<p><a href="#R-image-8d00c6d9d54c49fbe09f7b773bb82e8e" class="lightbox-link"><img alt="enterprise-features" class="lazy lightbox figure-image" loading="lazy" src="./images/insomnia-enterprise-features.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8d00c6d9d54c49fbe09f7b773bb82e8e"><img alt="enterprise-features" class="lazy lightbox lightbox-image" loading="lazy" src="./images/insomnia-enterprise-features.png"></a></p>
+<h2 id="insomnia-layout-ide-structure">Insomnia Layout: IDE Structure</h2>
+<p>When logged in, the left panel shows the <strong>organisation</strong> you belong to. In this workshop, we will use the <code>Kong CX</code> organisation.</p>
+<p>To the right, you can switch between the three main views in Insomnia:</p>
+<p><a href="#R-image-8cc72fc770ebb765f11f555e130ad049" class="lightbox-link"><img alt="insomnia-org" class="lazy lightbox figure-image" loading="lazy" src="./images/insomnia-org.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cc72fc770ebb765f11f555e130ad049"><img alt="insomnia-org" class="lazy lightbox lightbox-image" loading="lazy" src="./images/insomnia-org.png"></a></p>
+<table>
+  <thead>
+      <tr>
+          <th>View</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Spec</strong></td>
+          <td>Edit and validate your <code>OpenAPI</code> spec</td>
+      </tr>
+      <tr>
+          <td><strong>Collections</strong></td>
+          <td>Create requests for debugging and testing</td>
+      </tr>
+      <tr>
+          <td><strong>Tests</strong></td>
+          <td>Build and run test suites against your API</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="spec-tab">Spec Tab</h3>
+<p>Here you can:</p>
+<ul>
+<li>Create or paste in <code>OpenAPI</code> specifications</li>
+<li>Use Spectral-based linting to catch errors</li>
+<li><code>Customise</code> the ruleset (we&rsquo;ll cover this in a later module)</li>
+</ul>
+<p><a href="#R-image-2029ab721ea7d48d8c28af1acc897750" class="lightbox-link"><img alt="spec-tab" class="lazy lightbox figure-image" loading="lazy" src="./images/insomnia-design-screen.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2029ab721ea7d48d8c28af1acc897750"><img alt="spec-tab" class="lazy lightbox lightbox-image" loading="lazy" src="./images/insomnia-design-screen.png"></a></p>
+<h3 id="collections-tab">Collections Tab</h3>
+<p>This is where you:</p>
+<ul>
+<li>Create requests to test your API endpoints</li>
+<li>Add scripting logic (pre-request and post-response)</li>
+<li>Easily work across different environments (e.g., local vs production)</li>
+</ul>
+<h3 id="tests-tab">Tests Tab</h3>
+<p>Here you:</p>
+<ul>
+<li>Build reusable test suites based on your collection</li>
+<li>Write assertions against responses</li>
+<li>Run tests manually or using the <code>Inso CLI</code> in your <code>CI/CD</code> pipeline</li>
+</ul>
+<h2 id="insomnia-environments">Insomnia Environments</h2>
+<p>In Insomnia, <strong>environments</strong> are a powerful feature designed to make your API workflows more flexible, portable, and manageable.</p>
+<p>Rather than hard-coding server addresses, tokens, or API keys into individual requests, Insomnia allows you to define variables once at the environment level and reference them dynamically across your collections, tests, and specs.</p>
+<h3 id="why-environments-matter">Why Environments Matter</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Problem</th>
+          <th>How Environments Solve It</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Switching between dev, staging, and prod servers is manual and error-prone</td>
+          <td>Quickly swap environments with a dropdown</td>
+      </tr>
+      <tr>
+          <td>Secrets like tokens or credentials might get copied into requests accidentally</td>
+          <td>Securely store sensitive values separately</td>
+      </tr>
+      <tr>
+          <td>Collaboration becomes messy when people point to different servers or databases</td>
+          <td>Share consistent environment templates across teams</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="types-of-environments-in-insomnia">Types of Environments in Insomnia</h3>
+<ul>
+<li><strong>Base Environment</strong>:
+The global environment configuration for a project. Acts as a parent for all other environments.</li>
+<li><strong>Sub-Environments</strong>:
+Specific environment configurations for different stages (e.g., <code>local-dev</code>, <code>staging</code>, <code>production</code>). These inherit from the Base Environment.</li>
+<li><strong>Private vs Shared Environments</strong>:
+<ul>
+<li><strong>Shared environments</strong> are synced via Git and visible to team members.</li>
+<li><strong>Private environments</strong> (used mainly for local secrets) are local-only and not shared.</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-environments-are-used">How Environments Are Used</h3>
+<ul>
+<li>Defining API base URLs (e.g., <code>{{ base_url }}</code>)</li>
+<li>Setting authentication tokens dynamically</li>
+<li>Managing different sets of credentials</li>
+<li>Parameterise things like region, version numbers, customer IDs, or user roles</li>
+</ul>
+<p>Example of a simple environment:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;http://localhost:8081&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;api_key&#34;</span>: <span style="color:#e6db74">&#34;super-secret-key&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>And then in your request:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">GET {{ base_url }}/accounts</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">Authorization</span>: <span style="color:#ae81ff">Bearer {{ api_key }}</span></span></span></code></pre></div>
+<h3 id="automatic-environment-generation-from-openapi-specs">Automatic Environment Generation from <code>OpenAPI</code> Specs</h3>
+<p>When you import or build a design document in Insomnia that includes a servers block, Insomnia will automatically generate a collection environment based on the first server URL.</p>
+<p>For example, from a spec:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">servers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://localhost:8081</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Local development server</span></span></span></code></pre></div>
+<p>Insomnia creates an environment like:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;scheme&#34;</span>: <span style="color:#e6db74">&#34;http&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;host&#34;</span>: <span style="color:#e6db74">&#34;localhost:8081&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;base_path&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>You can then rename it to something meaningful like <code>local-dev</code>, and clean it up (for example, deleting any unused fields like <code>base_path</code>).</p>
+<p><strong>Best Practice:</strong> Always customise and rename your generated environments to match your project structure.</p>
+<h3 id="working-with-multiple-environments">Working with Multiple Environments</h3>
+<p>Once you have multiple environments defined (e.g., <code>local-dev</code>, <code>staging</code>, <code>production</code>), you can easily switch between them using the dropdown in the top left of the Insomnia UI.</p>
+<p>This changes the values dynamically across all requests and tests without you needing to manually edit URLs or tokens.</p>
+<h3 id="security-considerations">Security Considerations</h3>
+<ul>
+<li>Sensitive values like API keys, client secrets, or passwords should be placed in private environments or retrieved from external vaults (covered later in the Secrets Management module).</li>
+<li>Avoid committing sensitive data accidentally by using secret types or local environments.</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p>Using environments properly in Insomnia enables:</p>
+<ul>
+<li>Fast, reliable switching between different stages of your API</li>
+<li>Secure management of credentials and configuration</li>
+<li>Cleaner, reusable requests and test suites</li>
+<li>Better team collaboration on shared projects</li>
+</ul>
+<h2 id="next-module-begin-api-design">Next Module: Begin API Design</h2>
+<p>In the next module, we will create an Insomnia project for the <code>accounts-service</code> of Kong-Bank, then over the next few modules we will create and iterate upon a <code>OpenAPI</code> specification create collections, mocks, custom linting, and test suites within this Git-backed project.</p>
+<p>Continue to: <code>Module 1: Project Setup and Git Integration</code></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">APIOps with Kong Konnet and Insomnia</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="active hidden " data-nav-id="/00-01-insomnia-overview-readme/index.html"><a class="padding" href="/00-01-insomnia-overview-readme/index.html"></a></li>
+            <li class="" data-nav-id="/00-insomnia-overview/index.html"><a class="padding" href="/00-insomnia-overview/index.html">00-Insomnia-Overviews</a></li>
+            <li class="" data-nav-id="/01-project-setup-and-git-integration/index.html"><a class="padding" href="/01-project-setup-and-git-integration/index.html">01-Project-Setup-and-Git-Integrations</a></li>
+            <li class="" data-nav-id="/02-designing-an-api-specification/index.html"><a class="padding" href="/02-designing-an-api-specification/index.html">02-Designing-an-Api-Specifications</a></li>
+            <li class="" data-nav-id="/03-collections/index.html"><a class="padding" href="/03-collections/index.html">03-Collections</a></li>
+            <li class="" data-nav-id="/04-testing/index.html"><a class="padding" href="/04-testing/index.html">04-Testings</a></li>
+            <li class="" data-nav-id="/05-custom-linting/index.html"><a class="padding" href="/05-custom-linting/index.html">05-Custom-Lintings</a></li>
+            <li class="" data-nav-id="/06-cicd-testing/index.html"><a class="padding" href="/06-cicd-testing/index.html">06-CICD-Testings</a></li>
+            <li class="" data-nav-id="/07-mocking/index.html"><a class="padding" href="/07-mocking/index.html">07-Mockings</a></li>
+            <li class="" data-nav-id="/08-secrets-and-secure-collaboration/index.html"><a class="padding" href="/08-secrets-and-secure-collaboration/index.html">08-Secrets-and-Secure-Collaborations</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1754656900" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754656900" defer></script>
+    <script src="/js/theme.js?1754656900" defer></script>
+  </body>
+</html>

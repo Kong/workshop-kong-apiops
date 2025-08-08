@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Custom Linting with Spectral in Insomnia :: APIOps with Kong Konnet and Insomnia</title>
+    <link>http://localhost:1313/06-custom-linting/index.html</link>
+    <description>In this module, we introduce the concept of extending and customising Spectral linting in Insomnia. Many organisations define internal API design standards that build on top of OpenAPI. Insomnia allows you to enforce these standards through custom rules using Spectral — a powerful and flexible linter for structured JSON/YAML documents.&#xA;We’ll walk through the following:&#xA;What Spectral is and how it works in Insomnia How to override, extend, or remove linting rules Creating a .spectral.yaml configuration Enforcing internal standards (such as disallowing DELETE endpoints) Using Git and semantic versioning best practices to manage these changes Step 1: Understanding Spectral Linting Spectral is a rules engine built specifically for OpenAPI, JSON Schema, and AsyncAPI specifications. It scans your spec and flags issues related to style, structure, consistency, or breaking changes.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/06-custom-linting/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

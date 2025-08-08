@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>APIOps with Kong Konnect and Insomnia :: APIOps with Kong Konnet and Insomnia</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>Introduction Insomnia&#xA;Learning Objectives In this workshop, you will:&#xA;Get an architectural overview of Kong Konnect platform.&#xA;Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).&#xA;Learn what are services, routes and plugin.&#xA;Deploy a sample microservice and access the application using the defined route.&#xA;Use the platform to address the following API Gateway use cases&#xA;Proxy caching Authentication and Authorization Response Transformer Request Callout Rate limiting And the following AI Gateway use cases</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01-Project-Setup-and-Git-Integrations</title>
+      <link>http://localhost:1313/01-project-setup-and-git-integration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/01-project-setup-and-git-integration/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>02-Designing-an-Api-Specifications</title>
+      <link>http://localhost:1313/02-designing-an-api-specification/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/02-designing-an-api-specification/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>03-Collections</title>
+      <link>http://localhost:1313/03-collections/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/03-collections/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>04-Testings</title>
+      <link>http://localhost:1313/04-testing/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/04-testing/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>05-Custom-Lintings</title>
+      <link>http://localhost:1313/05-custom-linting/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/05-custom-linting/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>06-CICD-Testings</title>
+      <link>http://localhost:1313/06-cicd-testing/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/06-cicd-testing/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>07-Mockings</title>
+      <link>http://localhost:1313/07-mocking/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/07-mocking/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>08-Secrets-and-Secure-Collaborations</title>
+      <link>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Insomnia Overview</title>
+      <link>http://localhost:1313/00-insomnia-overview/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/00-insomnia-overview/index.html</guid>
+      <description>Module 00: Insomnia Overview Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.&#xA;With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.&#xA;What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:</description>
+    </item>
+  </channel>
+</rss>
