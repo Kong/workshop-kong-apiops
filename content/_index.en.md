@@ -22,31 +22,11 @@ In this workshop, you will:
 * Understand Secrets and Secure Collaboration
 
 
-# Expected Duration
-
-* Prerequisite Environment Setup (20 minutes)
-* Architectural Walkthrough (10 minutes)
-* Sample Application and addressing the use cases (60 minutes)
-<!-- * Observability (20 minutes) -->
-* Next Steps and Cleanup (5 min)
+---
 
 
-
-
-
-
--------------------------
-
-
-# Overview: Insomnia Adoption Repository Design
-
-We have put together the following git repository that contains templates for building out content for an Insomnia adoption workshop. The idea is the templates will contain a detailed walk through of each module, and from this content can be created such as video guides and instructor led courses.
-
-## Insomnia Workshop: Enterprise-Focused API Design and Testing
 
 ### Workshop Overview
-
-This workshop was created after reviewing the current Kong Academy Insomnia training and identifying a few key areas where updates were needed.
 
 Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:
 
@@ -55,7 +35,7 @@ Since that content was first developed, Insomnia has evolved significantly, espe
 - Secure secret handling via local and external enterprise vaults
 - Support for mocking APIs during design and development
 
-This version of the workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.
+This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.
 
 The repository currently contains a set of modules, and inside each module, documentation on how it should be run. It is intended to support the development of several onboarding artefacts:
 
@@ -70,6 +50,8 @@ This workshop also makes use of two additional repositories that provide working
 The original `BanKonG` application combined both accounts and transactions into a single, GUI-based app. However, for the purposes of this workshop, we have split the functionality into two separate services: one for accounts and one for transactions, with no GUI.
 
 This separation makes it easier to demonstrate developing a dependent API (`transactions-service`) using mocking when the upstream API (`accounts-service`) is not available.
+
+
 
 ## Workshop Structure and Learning Path
 
@@ -206,3 +188,14 @@ In order for a customer's employees to undertake the course, the following artef
 
 The process should begin with [00-insomnia-overview](./00-insomnia-overview/00-01-insomnia-overview-README.md), and teams should progress through each module in order. By the end, they will have developed a fully defined and testable API workflow — ready to integrate into their organisation’s `APIOps` pipeline.
 The content has also been structured to support flexibility. Teams can choose to start with a specific module and import all previous improvements up to that point. This allows them to dive directly into a topic of interest without having to complete every preceding module first.
+
+
+
+# Expected Duration
+
+* Prerequisite Environment Setup (20 minutes)
+* Architectural Walkthrough (10 minutes)
+* Sample Application and addressing the use cases (120 minutes)
+<!-- * Observability (20 minutes) -->
+* Next Steps and Cleanup (5 min)
+
