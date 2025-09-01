@@ -5,70 +5,50 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.148.2">
     <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
-    <meta name="description" content="Introduction Insomnia
+    <meta name="description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
 Learning Objectives In this workshop, you will:
-Get an architectural overview of Kong Konnect platform.
-Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).
-Learn what are services, routes and plugin.
-Deploy a sample microservice and access the application using the defined route.
-Use the platform to address the following API Gateway use cases
-Proxy caching Authentication and Authorization Response Transformer Request Callout Rate limiting And the following AI Gateway use cases">
+Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="APIOps with Kong Konnect and Insomnia">
-    <meta name="twitter:description" content="Introduction Insomnia
+    <meta name="twitter:description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
 Learning Objectives In this workshop, you will:
-Get an architectural overview of Kong Konnect platform.
-Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).
-Learn what are services, routes and plugin.
-Deploy a sample microservice and access the application using the defined route.
-Use the platform to address the following API Gateway use cases
-Proxy caching Authentication and Authorization Response Transformer Request Callout Rate limiting And the following AI Gateway use cases">
+Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
     <meta property="og:url" content="http://localhost:1313/index.html">
     <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
     <meta property="og:title" content="APIOps with Kong Konnect and Insomnia">
-    <meta property="og:description" content="Introduction Insomnia
+    <meta property="og:description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
 Learning Objectives In this workshop, you will:
-Get an architectural overview of Kong Konnect platform.
-Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).
-Learn what are services, routes and plugin.
-Deploy a sample microservice and access the application using the defined route.
-Use the platform to address the following API Gateway use cases
-Proxy caching Authentication and Authorization Response Transformer Request Callout Rate limiting And the following AI Gateway use cases">
+Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="APIOps with Kong Konnect and Insomnia">
-    <meta itemprop="description" content="Introduction Insomnia
+    <meta itemprop="description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
 Learning Objectives In this workshop, you will:
-Get an architectural overview of Kong Konnect platform.
-Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).
-Learn what are services, routes and plugin.
-Deploy a sample microservice and access the application using the defined route.
-Use the platform to address the following API Gateway use cases
-Proxy caching Authentication and Authorization Response Transformer Request Callout Rate limiting And the following AI Gateway use cases">
-    <meta itemprop="wordCount" content="119">
+Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
+    <meta itemprop="wordCount" content="102">
     <title>APIOps with Kong Konnect and Insomnia</title>
     <link href="/index.xml" rel="alternate" type="application/rss+xml" title="APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1754681639" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1754681639" defer></script>
-    <script src="/js/search-lunr.js?1754681639" defer></script>
-    <script src="/js/search.js?1754681639" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1754915738" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1754915738" defer></script>
+    <script src="/js/search-lunr.js?1754915738" defer></script>
+    <script src="/js/search.js?1754915738" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1754681639";
+      window.relearn.index_js_url="/searchindex.en.js?1754915738";
     </script>
-    <script src="/js/lunr/lunr.min.js?1754681639" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1754681639" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1754681639" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1754681639" defer></script>
+    <script src="/js/lunr/lunr.min.js?1754915738" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1754915738" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1754915738" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1754915738" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754681639" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754681639" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754681639" rel="stylesheet">
-    <link href="/css/theme.css?1754681639" rel="stylesheet">
-    <link href="/css/format-html.css?1754681639" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754915738" rel="stylesheet">
+    <link href="/css/theme.css?1754915738" rel="stylesheet">
+    <link href="/css/format-html.css?1754915738" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -167,49 +147,22 @@ Proxy caching Authentication and Authorization Response Transformer Request Call
 <h1 id="apiops-with-kong-konnect-and-insomnia">APIOps with Kong Konnect and Insomnia</h1>
 
 <h1 id="introduction">Introduction</h1>
-<p>Insomnia</p>
+<p>Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.</p>
 <h1 id="learning-objectives">Learning Objectives</h1>
 <p>In this workshop, you will:</p>
 <ul>
-<li>
-<p>Get an architectural overview of Kong Konnect platform.</p>
-</li>
-<li>
-<p>Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).</p>
-</li>
-<li>
-<p>Learn what are services, routes and plugin.</p>
-</li>
-<li>
-<p>Deploy a sample microservice and access the application using the defined route.</p>
-</li>
-<li>
-<p>Use the platform to address the following API Gateway use cases</p>
-<ul>
-<li>Proxy caching</li>
-<li>Authentication and Authorization</li>
-<li>Response Transformer</li>
-<li>Request Callout</li>
-<li>Rate limiting</li>
-</ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-</li>
-<li>
-<p>And the following AI Gateway use cases</p>
-<ul>
-<li>Prompt Engineering</li>
-<li>LLM-based Request and Reponse transformation</li>
-<li>Semantic Caching</li>
-<li>Token-based Rate Limiting</li>
-<li>Semantic Routing</li>
-<li>RAG - Retrieval-Augmented Generation</li>
-</ul>
-</li>
+<li>Setup a project and integrate it with GitHub</li>
+<li>Build an API Specification</li>
+<li>Understand Insomnia Collections and Scripting</li>
+<li>Create Test Suites</li>
+<li>Create custom Linting process</li>
+<li>Build a CI/CD testing with Inso CLI</li>
+<li>Create Mocks</li>
+<li>Understand Secrets and Secure Collaboration</li>
 </ul>
 <h1 id="expected-duration">Expected Duration</h1>
 <ul>
-<li>Pre-Requisite Environment Setup (20 minutes)</li>
+<li>Prerequisite Environment Setup (20 minutes)</li>
 <li>Architectural Walkthrough (10 minutes)</li>
 <li>Sample Application and addressing the use cases (60 minutes)</li>
 </ul>
@@ -289,8 +242,8 @@ Proxy caching Authentication and Authorization Response Transformer Request Call
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1754681639" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754681639" defer></script>
-    <script src="/js/theme.js?1754681639" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1754915738" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754915738" defer></script>
+    <script src="/js/theme.js?1754915738" defer></script>
   </body>
 </html>

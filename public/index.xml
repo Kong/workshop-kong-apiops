@@ -3,7 +3,7 @@
   <channel>
     <title>APIOps with Kong Konnect and Insomnia</title>
     <link>http://localhost:1313/index.html</link>
-    <description>Introduction Insomnia&#xA;Learning Objectives In this workshop, you will:&#xA;Get an architectural overview of Kong Konnect platform.&#xA;Set up Konnect runtime on Amazon Elastic Kubernetes Service (EKS).&#xA;Learn what are services, routes and plugin.&#xA;Deploy a sample microservice and access the application using the defined route.&#xA;Use the platform to address the following API Gateway use cases&#xA;Proxy caching Authentication and Authorization Response Transformer Request Callout Rate limiting And the following AI Gateway use cases</description>
+    <description>Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.&#xA;Learning Objectives In this workshop, you will:&#xA;Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />

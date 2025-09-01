@@ -54,7 +54,7 @@ This means your design can go straight from spec to runtime with minimal frictio
 Insomnia comes in two forms:
 
 - **Desktop App**: A powerful GUI interface for designing and debugging APIs.
-- **`Inso CLI`**: A command-line interface used to automate tasks as part of your `CI/CD` or `APIOps` pipeline.
+- **Inso CLI**: A command-line interface used to automate tasks as part of your `CI/CD` or `APIOps` pipeline.
 
 In this workshop, we will cover both.
 
@@ -62,8 +62,8 @@ In this workshop, we will cover both.
 
 Install both tools from your organisation's software centre or from the official download pages:
 
-- Desktop: [https://insomnia.rest/download](https://insomnia.rest/download)
-- `Inso CLI`: [https://docs.insomnia.rest/inso-cli/introduction](https://docs.insomnia.rest/inso-cli/introduction)
+- [Desktop](https://developer.konghq.com/insomnia/#install-insomnia)
+- [Inso CLI](https://developer.konghq.com/inso-cli/)
 
 ## Getting Started with Insomnia
 

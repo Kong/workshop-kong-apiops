@@ -59,6 +59,9 @@ Now clone your new repository locally:
 
 ```bash
 git clone https://github.com/konghq-cx/accounts-service-<your-initials>.git
+```
+
+```bash
 cd accounts-service-<your-initials>
 ```
 
