@@ -3,52 +3,52 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Hugo 0.149.0">
     <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
     <meta name="description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
-Learning Objectives In this workshop, you will:
-Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
+Workshop Overview Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:
+A new Git-based storage model (no longer relying on a .insomnia directory) Enhanced scripting support (pre-request and post-response) Secure secret handling via local and external enterprise vaults Support for mocking APIs during design and development This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="APIOps with Kong Konnect and Insomnia">
     <meta name="twitter:description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
-Learning Objectives In this workshop, you will:
-Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
+Workshop Overview Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:
+A new Git-based storage model (no longer relying on a .insomnia directory) Enhanced scripting support (pre-request and post-response) Secure secret handling via local and external enterprise vaults Support for mocking APIs during design and development This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.">
     <meta property="og:url" content="http://localhost:1313/index.html">
     <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
     <meta property="og:title" content="APIOps with Kong Konnect and Insomnia">
     <meta property="og:description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
-Learning Objectives In this workshop, you will:
-Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
+Workshop Overview Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:
+A new Git-based storage model (no longer relying on a .insomnia directory) Enhanced scripting support (pre-request and post-response) Secure secret handling via local and external enterprise vaults Support for mocking APIs during design and development This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="APIOps with Kong Konnect and Insomnia">
     <meta itemprop="description" content="Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
-Learning Objectives In this workshop, you will:
-Setup a project and integrate it with GitHub Build an API Specification Understand Insomnia Collections and Scripting Create Test Suites Create custom Linting process Build a CI/CD testing with Inso CLI Create Mocks Understand Secrets and Secure Collaboration Expected Duration Prerequisite Environment Setup (20 minutes) Architectural Walkthrough (10 minutes) Sample Application and addressing the use cases (60 minutes) Next Steps and Cleanup (5 min)">
-    <meta itemprop="wordCount" content="102">
+Workshop Overview Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:
+A new Git-based storage model (no longer relying on a .insomnia directory) Enhanced scripting support (pre-request and post-response) Secure secret handling via local and external enterprise vaults Support for mocking APIs during design and development This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.">
+    <meta itemprop="wordCount" content="1236">
     <title>APIOps with Kong Konnect and Insomnia</title>
     <link href="/index.xml" rel="alternate" type="application/rss+xml" title="APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1754915738" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1754915738" defer></script>
-    <script src="/js/search-lunr.js?1754915738" defer></script>
-    <script src="/js/search.js?1754915738" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1756807770" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756807770" defer></script>
+    <script src="/js/search-lunr.js?1756807770" defer></script>
+    <script src="/js/search.js?1756807770" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1754915738";
+      window.relearn.index_js_url="/searchindex.en.js?1756807770";
     </script>
-    <script src="/js/lunr/lunr.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1754915738" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756807770" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807770" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756807770" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756807770" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754915738" rel="stylesheet">
-    <link href="/css/theme.css?1754915738" rel="stylesheet">
-    <link href="/css/format-html.css?1754915738" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807770" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807770" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807770" rel="stylesheet">
+    <link href="/css/theme.css?1756807770" rel="stylesheet">
+    <link href="/css/format-html.css?1756807770" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -114,7 +114,36 @@ Setup a project and integrate it with GitHub Build an API Specification Understa
             </div>
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#workshop-overview">Workshop Overview</a></li>
+        <li><a href="#supporting-artefacts">Supporting Artefacts</a></li>
+      </ul>
+    </li>
+    <li><a href="#workshop-structure-and-learning-path">Workshop Structure and Learning Path</a>
+      <ul>
+        <li><a href="#participants-will-learn-how-to">Participants Will Learn How To</a></li>
+        <li><a href="#the-core-use-case">The Core Use Case</a></li>
+      </ul>
+    </li>
+    <li><a href="#services-used-in-this-workshop">Services Used in This Workshop</a>
+      <ul>
+        <li><a href="#enterprise-considerations">Enterprise Considerations</a></li>
+      </ul>
+    </li>
+    <li><a href="#workshop-structure">Workshop Structure</a></li>
+    <li><a href="#other-supporting-repositories">Other Supporting Repositories</a>
+      <ul>
+        <li><a href="#structure-of-the-insomnia-exports-repository">Structure of the Insomnia Exports Repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#list-of-supporting-artefacts-and-locations">List of Supporting Artefacts and locations</a></li>
+    <li><a href="#where-to-start">Where to Start</a></li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
@@ -124,7 +153,7 @@ Setup a project and integrate it with GitHub Build an API Specification Understa
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-left"></i></span>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/01-insomnia-overview/index.html" title="Insomnia Overview (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/01-project-setup-and-git-integration/index.html" title="01 - Project Setup and Git Integration (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -148,27 +177,133 @@ Setup a project and integrate it with GitHub Build an API Specification Understa
 
 <h1 id="introduction">Introduction</h1>
 <p>Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.</p>
-<h1 id="learning-objectives">Learning Objectives</h1>
-<p>In this workshop, you will:</p>
+<hr>
+<h3 id="workshop-overview">Workshop Overview</h3>
+<p>Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:</p>
 <ul>
-<li>Setup a project and integrate it with GitHub</li>
-<li>Build an API Specification</li>
-<li>Understand Insomnia Collections and Scripting</li>
-<li>Create Test Suites</li>
-<li>Create custom Linting process</li>
-<li>Build a CI/CD testing with Inso CLI</li>
-<li>Create Mocks</li>
-<li>Understand Secrets and Secure Collaboration</li>
+<li>A new Git-based storage model (no longer relying on a <code>.insomnia</code> directory)</li>
+<li>Enhanced scripting support (pre-request and post-response)</li>
+<li>Secure secret handling via local and external enterprise vaults</li>
+<li>Support for mocking APIs during design and development</li>
 </ul>
-<h1 id="expected-duration">Expected Duration</h1>
+<p>This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.</p>
+<p>The repository currently contains a set of modules, and inside each module, documentation on how it should be run. It is intended to support the development of several onboarding artefacts:</p>
 <ul>
-<li>Prerequisite Environment Setup (20 minutes)</li>
-<li>Architectural Walkthrough (10 minutes)</li>
-<li>Sample Application and addressing the use cases (60 minutes)</li>
+<li>Collateral for in-person instructor-led workshops</li>
+<li>Storyboards and exercises for video-based tutorials</li>
+<li>Self-led labs that can be run independently by teams or individuals</li>
 </ul>
+<h3 id="supporting-artefacts">Supporting Artefacts</h3>
+<p>This workshop also makes use of two additional repositories that provide working implementations for the API specifications built throughout the modules. These implementations allow us to demonstrate a broader range of Insomnia&rsquo;s advanced features, including mocking and secret management.</p>
+<p>The original <code>BanKonG</code> application combined both accounts and transactions into a single, GUI-based app. However, for the purposes of this workshop, we have split the functionality into two separate services: one for accounts and one for transactions, with no GUI.</p>
+<p>This separation makes it easier to demonstrate developing a dependent API (<code>transactions-service</code>) using mocking when the upstream API (<code>accounts-service</code>) is not available.</p>
+<h2 id="workshop-structure-and-learning-path">Workshop Structure and Learning Path</h2>
+<p>Participants will work through a real-world use case to design, debug, and test an API using Insomnia&rsquo;s full capabilities — both the desktop IDE and <code>Inso CLI</code>.</p>
+<h3 id="participants-will-learn-how-to">Participants Will Learn How To</h3>
 <ul>
-<li>Next Steps and Cleanup (5 min)</li>
+<li>Set up a Git-backed Insomnia project</li>
+<li>Design and version a full <code>OpenAPI</code> specification</li>
+<li>Build and organise request collections</li>
+<li>Write reusable test suites</li>
+<li>Implement pre-request and post-request scripting</li>
+<li>Create and consume mock APIs</li>
+<li>Configure custom Spectral linting rules</li>
+<li>Integrate with external vaults like HashiCorp Vault for secrets management</li>
+<li>Automate testing and linting via <code>CI/CD</code> with <code>Inso CLI</code></li>
+<li>Utilise Insomnia mocking to aid API design</li>
 </ul>
+<h3 id="the-core-use-case">The Core Use Case</h3>
+<p>Participants will build out a complete API for the <code>accounts-service</code>, including all its key operations (create, list, credit, debit, etc.). As the workshop progresses, they will also explore a second dependent service — the <code>transactions-service</code> — which integrates with the <code>accounts-service</code>.</p>
+<p>This structure allows us to demonstrate mocking and inter-service collaboration in realistic development workflows.</p>
+<h2 id="services-used-in-this-workshop">Services Used in This Workshop</h2>
+<p>To participate fully in the workshop, participants need access to the following repositories:</p>
+<ul>
+<li>
+<p><a href="https://github.com/KongHQ-CX/accounts-service" rel="external" target="_blank"><code>accounts-service</code></a><br>
+Contains an implementation for the banking Accounts API. This is the primary focus of the workshop. And we will use it to design the specification and demonstrate Insomnias features.</p>
+<p>Container image: <code>kongcx/accounts-service:1.0.0</code></p>
+</li>
+<li>
+<p><a href="https://github.com/KongHQ-CX/transactions-service" rel="external" target="_blank"><code>transactions-service</code></a><br>
+A secondary service used to demonstrate mocking and secret-sharing workflows. This service depends on the <code>accounts-service</code> to function.</p>
+<p>Container image: <code>kongcx/transactions-service:1.0.0</code></p>
+</li>
+</ul>
+<p>These repositories contain ready-to-use Docker setups, Insomnia specs, and example configurations tailored for this workshop.</p>
+<p>These supporting artefacts must be made available in the customer&rsquo;s environment. Coordinate with the customer&rsquo;s account team to ensure that the artefacts are uploaded to the correct locations.</p>
+<h3 id="enterprise-considerations">Enterprise Considerations</h3>
+<p>Many large organisations will not be able to use public GitHub or docker hub, for these situations the repositories can be imported into a customer enterprise GitHub environment and the container images into an approved artefact store.</p>
+<h2 id="workshop-structure">Workshop Structure</h2>
+<p>Each section corresponds to a key module in the learning journey:</p>
+<ol start="0">
+<li>Insomnia Overview</li>
+<li>Project Setup and Git Integration</li>
+<li>Building the API Specification</li>
+<li>Collections and Scripting</li>
+<li>Creating Test Suites and Extending the Specification</li>
+<li>Custom Linting with Spectral in Insomnia</li>
+<li>CI/CD Testing with Inso CLI</li>
+<li>Mocking</li>
+<li>Secrets and Secure Collaboration</li>
+</ol>
+<p>Each one includes objectives, and exercises for that section. Some modules also contain screenshots, YAML configs, or example response data to help guide the learning process.</p>
+<h2 id="other-supporting-repositories">Other Supporting Repositories</h2>
+<p>The course is designed to be completed sequentially, from <strong>Module 01</strong> through to <strong>Module 08</strong>, with each module building on the work from the previous one. <strong>Module 00</strong> serves as an initial overview of the Insomnia tool itself.</p>
+<p>However, we recognise that some users may prefer to focus on specific topics rather than working through the entire sequence. For example, a participant who already feels confident with Insomnia basics, Git integration, API specification design, collections, and testing may wish to dive directly into <strong>Module 07: Custom Linting</strong>. To support this flexibility, users should be able to start any module by importing the correct project state, so that their Insomnia environment matches the expected starting point for that module.</p>
+<p>To enable this, we provide a <strong>supporting repository</strong> containing Insomnia metadata exports for each module.</p>
+<p>Most modules include only the Insomnia v5 <strong><code>OpenAPI</code></strong> specification file, which captures the design document, collections, environments, and tests.</p>
+<p>For <strong>Modules 07</strong> and <strong>08</strong>, additional <strong>mock metadata files</strong> are included to support the mocking workflows covered in those sections.</p>
+<h3 id="structure-of-the-insomnia-exports-repository">Structure of the Insomnia Exports Repository</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>insomnia-workshop-exports
+</span></span><span style="display:flex;"><span>├── accounts-service
+</span></span><span style="display:flex;"><span>│   ├── module-02
+</span></span><span style="display:flex;"><span>│   │   └── api-spec
+</span></span><span style="display:flex;"><span>│   │       └── module-02-end-state.yaml
+</span></span><span style="display:flex;"><span>│   ├── module-03
+</span></span><span style="display:flex;"><span>│   ├── module-04
+</span></span><span style="display:flex;"><span>│   │   └── api-spec
+</span></span><span style="display:flex;"><span>│   │       └── module-04-end-state.yaml
+</span></span><span style="display:flex;"><span>│   ├── module-05
+</span></span><span style="display:flex;"><span>│   │   └── api-spec
+</span></span><span style="display:flex;"><span>│   │       ├── module-05-01-end-state.yaml
+</span></span><span style="display:flex;"><span>│   │       └── module-05-02-end-state.yaml
+</span></span><span style="display:flex;"><span>│   ├── module-06
+</span></span><span style="display:flex;"><span>│   │   └── api-spec
+</span></span><span style="display:flex;"><span>│   │       └── module-06-end-state.yaml
+</span></span><span style="display:flex;"><span>│   ├── module-07
+</span></span><span style="display:flex;"><span>│   │   ├── api-spec
+</span></span><span style="display:flex;"><span>│   │   │   └── module-07-end-state.yaml
+</span></span><span style="display:flex;"><span>│   │   └── mock-spec
+</span></span><span style="display:flex;"><span>│   │       └── module-07-mock-end-state.yaml
+</span></span><span style="display:flex;"><span>│   └── module-08
+</span></span><span style="display:flex;"><span>└── transactions-service
+</span></span><span style="display:flex;"><span>    ├── module-07
+</span></span><span style="display:flex;"><span>    │   ├── api-spec
+</span></span><span style="display:flex;"><span>    │   │   └── module-07-end-state.yaml
+</span></span><span style="display:flex;"><span>    │   └── mock-spec
+</span></span><span style="display:flex;"><span>    │       └── module-07-mock-end-state.yaml
+</span></span><span style="display:flex;"><span>    └── module-08
+</span></span><span style="display:flex;"><span>        └── api-spec
+</span></span><span style="display:flex;"><span>            └── module-08-end-state.yaml</span></span></code></pre></div>
+<p>Where there are two end-state files for a single module, it indicates that the module contains multiple parts, and each part has its own corresponding final state export.</p>
+<p>This export structure ensures that users can pick up the workshop at any point while maintaining a consistent and correct project setup in Insomnia.</p>
+<p>Like with the other supporting artefact this repository will also need to be made available in the customer&rsquo;s environment, the appropriate steps should be taken to make these supporting artefacts are uploaded to the correct places.</p>
+<h2 id="list-of-supporting-artefacts-and-locations">List of Supporting Artefacts and locations</h2>
+<p>In order for a customer&rsquo;s employees to undertake the course, the following artefacts should be uploaded to the customer&rsquo;s environment (e.g., GitHub Enterprise, Nexus).</p>
+<ul>
+<li><a href="https://github.com/KongHQ-CX/insomnia-workshop-templates" rel="external" target="_blank">This repo</a> or access Kong Academy to obtain the course materials</li>
+<li><a href="https://github.com/KongHQ-CX/accounts-service" rel="external" target="_blank"><code>accounts-service</code></a>. Set this up as a <code>GitHub</code> or <code>GitLab</code> repository template. (If <code>BitBucket</code> clone and create new repository from clone)</li>
+<li><a href="https://github.com/KongHQ-CX/transactions-service" rel="external" target="_blank"><code>transactions-service</code></a>. Set this up as a <code>GitHub</code> or <code>GitLab</code> repository template. (If <code>BitBucket</code> clone and create new repository from clone)</li>
+<li><code>accounts-service</code> docker image <code>docker.io/kongcx/accounts-service:1.0.0</code></li>
+<li><code>transactions-service</code> docker image <code>docker.io/kongcx/transactions-service:1.0.0</code></li>
+<li><code>redis</code> docker image <code>docker.io/library/redis:7.4.3</code></li>
+<li><code>insomnia-mockbin</code> docker image <code>ghcr.io/kong/insomnia-mockbin:v2.0.2</code></li>
+<li><code>HashiCorp-Vault</code> docker image <code>docker.io/hashicorp/vault:1.19.3</code></li>
+<li><a href="https://github.com/KongHQ-CX/insomnia-workshop-exports" rel="external" target="_blank">Export repository</a> - Used to allow participants to jump into any module and load the end state from the last module</li>
+</ul>
+<h2 id="where-to-start">Where to Start</h2>
+<p>The process should begin with <strong>Module 0: Insomnia Overview</strong>, and teams should progress through each module in order. By the end, they will have developed a fully defined and testable API workflow — ready to integrate into their organisation’s <code>APIOps</code> pipeline.
+The content has also been structured to support flexibility. Teams can choose to start with a specific module and import all previous improvements up to that point. This allows them to dive directly into a topic of interest without having to complete every preceding module first.</p>
 
   <footer class="footline">
   </footer>
@@ -216,15 +351,15 @@ Setup a project and integrate it with GitHub Build an API Specification Understa
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-id="/01-insomnia-overview/index.html"><a class="padding" href="/01-insomnia-overview/index.html">Insomnia Overview</a></li>
-            <li class="" data-nav-id="/02-project-setup-and-git-integration/index.html"><a class="padding" href="/02-project-setup-and-git-integration/index.html">Project Setup and Git Integration</a></li>
-            <li class="" data-nav-id="/03-designing-an-api-specification/index.html"><a class="padding" href="/03-designing-an-api-specification/index.html">Building the API Specification</a></li>
-            <li class="" data-nav-id="/04-collections/index.html"><a class="padding" href="/04-collections/index.html">Collections and Scripting</a></li>
-            <li class="" data-nav-id="/05-testing/index.html"><a class="padding" href="/05-testing/index.html">Creating Test Suites and Extending the Specification</a></li>
-            <li class="" data-nav-id="/06-custom-linting/index.html"><a class="padding" href="/06-custom-linting/index.html">Custom Linting with Spectral in Insomnia</a></li>
-            <li class="" data-nav-id="/07-cicd-testing/index.html"><a class="padding" href="/07-cicd-testing/index.html">CI/CD Testing with Inso CLI</a></li>
-            <li class="" data-nav-id="/08-mocking/index.html"><a class="padding" href="/08-mocking/index.html">Mocking</a></li>
-            <li class="" data-nav-id="/09-secrets-and-secure-collaboration/index.html"><a class="padding" href="/09-secrets-and-secure-collaboration/index.html">Secrets and Secure Collaboration</a></li>
+            <li class="" data-nav-id="/01-project-setup-and-git-integration/index.html"><a class="padding" href="/01-project-setup-and-git-integration/index.html">01 - Project Setup and Git Integration</a></li>
+            <li class="" data-nav-id="/02-designing-an-api-specification/index.html"><a class="padding" href="/02-designing-an-api-specification/index.html">02 - Building the API Specification</a></li>
+            <li class="" data-nav-id="/03-collections/index.html"><a class="padding" href="/03-collections/index.html">03 - Collections and Scripting</a></li>
+            <li class="" data-nav-id="/04-testing/index.html"><a class="padding" href="/04-testing/index.html">04 - Creating Test Suites and Extending the Specification</a></li>
+            <li class="" data-nav-id="/05-custom-linting/index.html"><a class="padding" href="/05-custom-linting/index.html">05 - Custom Linting with Spectral in Insomnia</a></li>
+            <li class="" data-nav-id="/06-cicd-testing/index.html"><a class="padding" href="/06-cicd-testing/index.html">06 - CI/CD Testing with Inso CLI</a></li>
+            <li class="" data-nav-id="/07-mocking/index.html"><a class="padding" href="/07-mocking/index.html">07 - Mocking</a></li>
+            <li class="" data-nav-id="/08-secrets-and-secure-collaboration/index.html"><a class="padding" href="/08-secrets-and-secure-collaboration/index.html">08 - Secrets and Secure Collaboration</a></li>
+            <li class="" data-nav-id="/00-insomnia-overview/index.html"><a class="padding" href="/00-insomnia-overview/index.html">00 - Insomnia Overview</a></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
@@ -242,8 +377,8 @@ Setup a project and integrate it with GitHub Build an API Specification Understa
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1754915738" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754915738" defer></script>
-    <script src="/js/theme.js?1754915738" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756807770" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807770" defer></script>
+    <script src="/js/theme.js?1756807770" defer></script>
   </body>
 </html>

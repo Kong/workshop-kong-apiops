@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>07 - Mocking :: APIOps with Kong Konnect and Insomnia</title>
+    <link>http://localhost:1313/07-mocking/index.html</link>
+    <description>In this module, we explore the value of API mocking and demonstrate how to use Insomnia’s self-hosted mocking to support dependent service development — in our case, the transactions-service which relies on the accounts-service.&#xA;Mocking is an important capability in modern API design and development. It allows teams to:&#xA;Work in parallel — consumers can develop against a stable interface before the backend is live. Prototype integrations without depending on backend uptime. Validate request/response formats early and often. Insomnia supports two modes of mocking:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/07-mocking/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

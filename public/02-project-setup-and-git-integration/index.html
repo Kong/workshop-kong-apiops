@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Hugo 0.149.0">
     <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
     <meta name="description" content="Welcome to the Insomnia Workshop.
 In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.
@@ -33,26 +33,26 @@ About This Workshop You will be working with a Git-backed API specification proj
     <meta itemprop="wordCount" content="1271">
     <title>Project Setup and Git Integration :: APIOps with Kong Konnect and Insomnia</title>
     <link href="/02-project-setup-and-git-integration/index.xml" rel="alternate" type="application/rss+xml" title="Project Setup and Git Integration :: APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1754915738" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1754915738" defer></script>
-    <script src="/js/search-lunr.js?1754915738" defer></script>
-    <script src="/js/search.js?1754915738" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1756807536" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756807536" defer></script>
+    <script src="/js/search-lunr.js?1756807536" defer></script>
+    <script src="/js/search.js?1756807536" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1754915738";
+      window.relearn.index_js_url="/searchindex.en.js?1756807536";
     </script>
-    <script src="/js/lunr/lunr.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1754915738" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756807536" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807536" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756807536" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756807536" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754915738" rel="stylesheet">
-    <link href="/css/theme.css?1754915738" rel="stylesheet">
-    <link href="/css/format-html.css?1754915738" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807536" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807536" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807536" rel="stylesheet">
+    <link href="/css/theme.css?1756807536" rel="stylesheet">
+    <link href="/css/format-html.css?1756807536" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -155,7 +155,7 @@ About This Workshop You will be working with a Git-backed API specification proj
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Project Setup and Git Integration</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/01-insomnia-overview/index.html" title="Insomnia Overview (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/00-insomnia-overview/index.html" title="00 - Insomnia Overview (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/03-designing-an-api-specification/index.html" title="Building the API Specification (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
@@ -251,14 +251,14 @@ About This Workshop You will be working with a Git-backed API specification proj
 <li>Choose &ldquo;Git-Sync&rdquo;.</li>
 <li>Set name for the project e.g. <code>accounts-service-&lt;your-initials&gt;</code></li>
 <li>Click next
-<a href="#R-image-2d77cfeb70cb0586c2f2834b131498d0" class="lightbox-link"><img alt="create-git-project" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/create-git-project.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d77cfeb70cb0586c2f2834b131498d0"><img alt="create-git-project" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/create-git-project.png"></a></li>
+<a href="#R-image-5a2949c74396f85939238ae9a68e0c9d" class="lightbox-link"><img alt="create-git-project" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/create-git-project.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a2949c74396f85939238ae9a68e0c9d"><img alt="create-git-project" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/create-git-project.png"></a></li>
 <li>Select the repository from the dropdown when it appears.
 <ul>
 <li>If the repository does not appear you may need to authorise Insomnia to you GitHub organisation</li>
 <li>If this happens you can click on the <code>Can't find a repository? Configure the App</code> link, which will take you off to GitHub to authorise Insomnia
-<a href="#R-image-641b60835c74bf7072d60a05c17c1587" class="lightbox-link"><img alt="select-git-project" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-project.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-641b60835c74bf7072d60a05c17c1587"><img alt="select-git-project" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-project.png"></a></li>
+<a href="#R-image-a726566c52681452a892f6468026dd19" class="lightbox-link"><img alt="select-git-project" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-project.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a726566c52681452a892f6468026dd19"><img alt="select-git-project" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-project.png"></a></li>
 </ul>
 </li>
 <li>You will see a message indicating that no existing Insomnia files were found:</li>
@@ -266,8 +266,8 @@ About This Workshop You will be working with a Git-backed API specification proj
 <blockquote>
 <p>This is expected as we have not yet added an Insomnia metadata to this project.
 We will create these the next few modules as we create our <code>OpenAPI</code> specification, collections and tests.</p></blockquote>
-<p><a href="#R-image-a7349d946fbf1fea531ea9bd551f1f66" class="lightbox-link"><img alt="<code>no-insomnia-files</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/no-insomnia-files.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a7349d946fbf1fea531ea9bd551f1f66"><img alt="<code>no-insomnia-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/no-insomnia-files.png"></a></p>
+<p><a href="#R-image-83d0f0cc7e90be0cd663233712dd57f8" class="lightbox-link"><img alt="<code>no-insomnia-files</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/no-insomnia-files.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-83d0f0cc7e90be0cd663233712dd57f8"><img alt="<code>no-insomnia-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/no-insomnia-files.png"></a></p>
 <h3 id="how-insomnia-handles-project-metadata-v11">How Insomnia Handles Project Metadata (v11)</h3>
 <p>In Insomnia v11, metadata such as collections, test scripts, environments, and design documents are no longer stored in a separate <code>.insomnia</code> directory.</p>
 <p>Instead:</p>
@@ -280,8 +280,8 @@ We will create these the next few modules as we create our <code>OpenAPI</code> 
 <p>With Git Sync configured, Insomnia provides powerful Git integration features directly within the interface. These tools allow teams to collaborate on shared API projects while maintaining clean version control and visibility into changes.</p>
 <h3 id="git-operations-menu">Git Operations Menu</h3>
 <p>Use the <strong>Git Sync</strong> menu (found in the left-hand sidebar) to:
-<a href="#R-image-6e43c7ba0ebc5f37f2336df51cc91518" class="lightbox-link"><img alt="<code>git-menu-access</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/access-to-git-menu-and-menu.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6e43c7ba0ebc5f37f2336df51cc91518"><img alt="<code>git-menu-access</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/access-to-git-menu-and-menu.png"></a></p>
+<a href="#R-image-6da3279797847a3b35789b39dd17ffb3" class="lightbox-link"><img alt="<code>git-menu-access</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/access-to-git-menu-and-menu.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6da3279797847a3b35789b39dd17ffb3"><img alt="<code>git-menu-access</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/access-to-git-menu-and-menu.png"></a></p>
 <ul>
 <li>View commit history</li>
 <li>Create and switch between branches</li>
@@ -302,8 +302,8 @@ We will create these the next few modules as we create our <code>OpenAPI</code> 
 <p><em>Note: Remote branches will only appear after they&rsquo;ve been pushed or fetched at least once.</em></p></blockquote>
 </li>
 </ul>
-<p><a href="#R-image-736e979764576ba6ea4dd360884e762f" class="lightbox-link"><img alt="<code>git-branch-management</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-management.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-736e979764576ba6ea4dd360884e762f"><img alt="<code>git-branch-management</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-management.png"></a></p>
+<p><a href="#R-image-92b9b62ee67b94c2bb86abd4df62e4be" class="lightbox-link"><img alt="<code>git-branch-management</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-management.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-92b9b62ee67b94c2bb86abd4df62e4be"><img alt="<code>git-branch-management</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-management.png"></a></p>
 <h3 id="committing-and-pushing-changes">Committing and Pushing Changes</h3>
 <p>To commit:</p>
 <ol>
@@ -317,8 +317,8 @@ We will create these the next few modules as we create our <code>OpenAPI</code> 
 <li>Click <strong>Push</strong> in the same Git menu</li>
 <li>On first push, Insomnia will initialise metadata in the spec file</li>
 </ol>
-<p><a href="#R-image-4b805c8b0b8cfd92d8e99d73647c3bed" class="lightbox-link"><img alt="<code>git-commit-menu</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-commit-and-push.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4b805c8b0b8cfd92d8e99d73647c3bed"><img alt="<code>git-commit-menu</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-commit-and-push.png"></a></p>
+<p><a href="#R-image-647ccf4e97472b789e4594eede70cd84" class="lightbox-link"><img alt="<code>git-commit-menu</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-commit-and-push.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-647ccf4e97472b789e4594eede70cd84"><img alt="<code>git-commit-menu</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-commit-and-push.png"></a></p>
 <h3 id="pulling-changes-from-collaborators">Pulling Changes from Collaborators</h3>
 <p>When teammates push updates to the shared repo, you can stay in sync by:</p>
 <ol>
@@ -369,12 +369,12 @@ In this workshop, we will mirror that practice:</p>
 <p>To create it:</p>
 <ol>
 <li>Open the Git Sync menu
-<a href="#R-image-368130b8fdb8223d5d66795c2b20f06c" class="lightbox-link"><img alt="select-git-menu" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-menu.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-368130b8fdb8223d5d66795c2b20f06c"><img alt="select-git-menu" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-menu.png"></a></li>
+<a href="#R-image-af0b8caa53aeca358fa81b739b7caa6d" class="lightbox-link"><img alt="select-git-menu" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-menu.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-af0b8caa53aeca358fa81b739b7caa6d"><img alt="select-git-menu" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/select-git-menu.png"></a></li>
 <li>Click <strong>Branches</strong></li>
 <li>Type the branch name and click <strong>Create</strong>
-<a href="#R-image-af15a9459b4081d39fc6fac3c9053338" class="lightbox-link"><img alt="git-branch-menu" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-menu.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-af15a9459b4081d39fc6fac3c9053338"><img alt="git-branch-menu" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-menu.png"></a></li>
+<a href="#R-image-1ec5f0b63b06629815ffc7a80ac569cc" class="lightbox-link"><img alt="git-branch-menu" class="lazy lightbox figure-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-menu.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1ec5f0b63b06629815ffc7a80ac569cc"><img alt="git-branch-menu" class="lazy lightbox lightbox-image" loading="lazy" src="/02-project-setup-and-git-integration/images/git-branch-menu.png"></a></li>
 <li>Insomnia will automatically switch to the new branch</li>
 </ol>
 <p>You&rsquo;ll now be ready to begin designing and testing the API in the next module.</p>
@@ -435,7 +435,7 @@ In this workshop, we will mirror that practice:</p>
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-id="/01-insomnia-overview/index.html"><a class="padding" href="/01-insomnia-overview/index.html">Insomnia Overview</a></li>
+            <li class="" data-nav-id="/00-insomnia-overview/index.html"><a class="padding" href="/00-insomnia-overview/index.html">00 - Insomnia Overview</a></li>
             <li class="active " data-nav-id="/02-project-setup-and-git-integration/index.html"><a class="padding" href="/02-project-setup-and-git-integration/index.html">Project Setup and Git Integration</a></li>
             <li class="" data-nav-id="/03-designing-an-api-specification/index.html"><a class="padding" href="/03-designing-an-api-specification/index.html">Building the API Specification</a></li>
             <li class="" data-nav-id="/04-collections/index.html"><a class="padding" href="/04-collections/index.html">Collections and Scripting</a></li>
@@ -461,8 +461,8 @@ In this workshop, we will mirror that practice:</p>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1754915738" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754915738" defer></script>
-    <script src="/js/theme.js?1754915738" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756807536" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807536" defer></script>
+    <script src="/js/theme.js?1756807536" defer></script>
   </body>
 </html>

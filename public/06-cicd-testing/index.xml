@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>06 - CI/CD Testing with Inso CLI :: APIOps with Kong Konnect and Insomnia</title>
+    <link>http://localhost:1313/06-cicd-testing/index.html</link>
+    <description>In this module, we introduce the Inso CLI — the command-line companion to the Insomnia desktop application. Inso CLI is designed for use in terminal workflows and automation pipelines, bringing the power of Insomnia into your CI/CD systems.&#xA;Official docs: Inso CLI Introduction&#xA;Step 1: Understanding Inso CLI Inso CLI is built on Node.js and uses the same core libraries as the Insomnia app. It allows you to:&#xA;Run linting against your OpenAPI spec Execute unit tests defined in Insomnia Export and execute collections Integrate seamlessly into CI/CD pipelines Its primary use case is to enforce API quality and consistency at key stages in the software delivery lifecycle — not just on a developer’s machine, but in the merge and release process itself.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/06-cicd-testing/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

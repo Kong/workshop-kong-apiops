@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Hugo 0.149.0">
     <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
     <meta name="description" content="In this module, we introduce the concept of extending and customising Spectral linting in Insomnia. Many organisations define internal API design standards that build on top of OpenAPI. Insomnia allows you to enforce these standards through custom rules using Spectral — a powerful and flexible linter for structured JSON/YAML documents.
 We’ll walk through the following:
@@ -29,26 +29,26 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
     <meta itemprop="wordCount" content="921">
     <title>Custom Linting with Spectral in Insomnia :: APIOps with Kong Konnect and Insomnia</title>
     <link href="/06-custom-linting/index.xml" rel="alternate" type="application/rss+xml" title="Custom Linting with Spectral in Insomnia :: APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1754915738" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1754915738" defer></script>
-    <script src="/js/search-lunr.js?1754915738" defer></script>
-    <script src="/js/search.js?1754915738" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1756807660" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756807660" defer></script>
+    <script src="/js/search-lunr.js?1756807660" defer></script>
+    <script src="/js/search.js?1756807660" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1754915738";
+      window.relearn.index_js_url="/searchindex.en.js?1756807660";
     </script>
-    <script src="/js/lunr/lunr.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1754915738" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1754915738" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756807660" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807660" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756807660" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756807660" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1754915738" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1754915738" rel="stylesheet">
-    <link href="/css/theme.css?1754915738" rel="stylesheet">
-    <link href="/css/format-html.css?1754915738" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807660" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807660" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807660" rel="stylesheet">
+    <link href="/css/theme.css?1756807660" rel="stylesheet">
+    <link href="/css/format-html.css?1756807660" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -149,7 +149,7 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Custom Linting with Spectral in Insomnia</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/05-testing/index.html" title="Creating Test Suites and Extending the Specification (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/04-testing/index.html" title="04 - Creating Test Suites and Extending the Specification (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/07-cicd-testing/index.html" title="CI/CD Testing with Inso CLI (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
@@ -194,8 +194,8 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
 <li>Create a new branch named <code>feature/custom-spectral-rules</code></li>
 <li>Click &ldquo;Create&rdquo; to switch to the new branch</li>
 </ol>
-<p><a href="#R-image-0245bdaee4ee6eb2fe36115004252f32" class="lightbox-link"><img alt="<code>module-05-feature-branch</code>" class="lazy lightbox figure-image" loading="lazy" src="/06-custom-linting/images/module-05-feature-branch.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0245bdaee4ee6eb2fe36115004252f32"><img alt="<code>module-05-feature-branch</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/06-custom-linting/images/module-05-feature-branch.png"></a></p>
+<p><a href="#R-image-080de830945386fbc46b3318a2c9745d" class="lightbox-link"><img alt="<code>module-05-feature-branch</code>" class="lazy lightbox figure-image" loading="lazy" src="/06-custom-linting/images/module-05-feature-branch.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-080de830945386fbc46b3318a2c9745d"><img alt="<code>module-05-feature-branch</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/06-custom-linting/images/module-05-feature-branch.png"></a></p>
 <h2 id="step-3-prepare-the-specification-file">Step 3: Prepare the Specification File</h2>
 <p>As we are removing functionality, this may be considered a breaking change. Follow semantic versioning principles.</p>
 <ol>
@@ -285,8 +285,8 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
 <h2 id="step-5-validate-in-insomnia">Step 5: Validate in Insomnia</h2>
 <p>Open your design document in Insomnia. You should now see a new linting error indicating that the <code>DELETE /accounts/{accountId}</code> operation violates your organisation&rsquo;s standards.</p>
 <p>Take a moment to observe how Insomnia highlights the rule failure directly in the UI, with the custom error message.</p>
-<p><a href="#R-image-faa915f5fb25b8e2a4668c2e0a58760e" class="lightbox-link"><img alt="<code>module-05-spectral-fail</code>" class="lazy lightbox figure-image" loading="lazy" src="/06-custom-linting/images/module-05-spectral-fail.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-faa915f5fb25b8e2a4668c2e0a58760e"><img alt="<code>module-05-spectral-fail</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/06-custom-linting/images/module-05-spectral-fail.png"></a></p>
+<p><a href="#R-image-450e7d64a5af182ec32b8efac930a1d8" class="lightbox-link"><img alt="<code>module-05-spectral-fail</code>" class="lazy lightbox figure-image" loading="lazy" src="/06-custom-linting/images/module-05-spectral-fail.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-450e7d64a5af182ec32b8efac930a1d8"><img alt="<code>module-05-spectral-fail</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/06-custom-linting/images/module-05-spectral-fail.png"></a></p>
 <h2 id="step-6-fix-the-linting-issue">Step 6: Fix the Linting Issue</h2>
 <p>To become compliant again:</p>
 <ol>
@@ -306,8 +306,8 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
 <p>Push to your remote branch</p>
 </li>
 </ol>
-<p><a href="#R-image-c330963d5cbdc4aab04c43e7b2993379" class="lightbox-link"><img alt="<code>module-05-commit-3</code>" class="lazy lightbox figure-image" loading="lazy" src="/06-custom-linting/images/module-05-commit-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c330963d5cbdc4aab04c43e7b2993379"><img alt="<code>module-05-commit-3</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/06-custom-linting/images/module-05-commit-3.png"></a></p>
+<p><a href="#R-image-b0b2552f16372e8f367456e47e4309eb" class="lightbox-link"><img alt="<code>module-05-commit-3</code>" class="lazy lightbox figure-image" loading="lazy" src="/06-custom-linting/images/module-05-commit-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b0b2552f16372e8f367456e47e4309eb"><img alt="<code>module-05-commit-3</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/06-custom-linting/images/module-05-commit-3.png"></a></p>
 <h2 id="step-8-create-a-pull-request">Step 8: Create a Pull Request</h2>
 <p>Once you&rsquo;ve fixed all linting issues and properly versioned your changes:</p>
 <ol>
@@ -381,15 +381,15 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-id="/01-insomnia-overview/index.html"><a class="padding" href="/01-insomnia-overview/index.html">Insomnia Overview</a></li>
-            <li class="" data-nav-id="/02-project-setup-and-git-integration/index.html"><a class="padding" href="/02-project-setup-and-git-integration/index.html">Project Setup and Git Integration</a></li>
-            <li class="" data-nav-id="/03-designing-an-api-specification/index.html"><a class="padding" href="/03-designing-an-api-specification/index.html">Building the API Specification</a></li>
-            <li class="" data-nav-id="/04-collections/index.html"><a class="padding" href="/04-collections/index.html">Collections and Scripting</a></li>
-            <li class="" data-nav-id="/05-testing/index.html"><a class="padding" href="/05-testing/index.html">Creating Test Suites and Extending the Specification</a></li>
+            <li class="" data-nav-id="/01-project-setup-and-git-integration/index.html"><a class="padding" href="/01-project-setup-and-git-integration/index.html">01 - Project Setup and Git Integration</a></li>
+            <li class="" data-nav-id="/02-designing-an-api-specification/index.html"><a class="padding" href="/02-designing-an-api-specification/index.html">02 - Building the API Specification</a></li>
+            <li class="" data-nav-id="/03-collections/index.html"><a class="padding" href="/03-collections/index.html">03 - Collections and Scripting</a></li>
+            <li class="" data-nav-id="/04-testing/index.html"><a class="padding" href="/04-testing/index.html">04 - Creating Test Suites and Extending the Specification</a></li>
             <li class="active " data-nav-id="/06-custom-linting/index.html"><a class="padding" href="/06-custom-linting/index.html">Custom Linting with Spectral in Insomnia</a></li>
             <li class="" data-nav-id="/07-cicd-testing/index.html"><a class="padding" href="/07-cicd-testing/index.html">CI/CD Testing with Inso CLI</a></li>
             <li class="" data-nav-id="/08-mocking/index.html"><a class="padding" href="/08-mocking/index.html">Mocking</a></li>
             <li class="" data-nav-id="/09-secrets-and-secure-collaboration/index.html"><a class="padding" href="/09-secrets-and-secure-collaboration/index.html">Secrets and Secure Collaboration</a></li>
+            <li class="" data-nav-id="/00-insomnia-overview/index.html"><a class="padding" href="/00-insomnia-overview/index.html">00 - Insomnia Overview</a></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
@@ -407,8 +407,8 @@ What Spectral is and how it works in Insomnia How to override, extend, or remove
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1754915738" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1754915738" defer></script>
-    <script src="/js/theme.js?1754915738" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756807660" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807660" defer></script>
+    <script src="/js/theme.js?1756807660" defer></script>
   </body>
 </html>

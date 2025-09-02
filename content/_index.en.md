@@ -8,20 +8,6 @@ weight: 0
 Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.
 
 
-# Learning Objectives
-
-In this workshop, you will:
-
-* Setup a project and integrate it with GitHub
-* Build an API Specification
-* Understand Insomnia Collections and Scripting
-* Create Test Suites
-* Create custom Linting process
-* Build a CI/CD testing with Inso CLI
-* Create Mocks
-* Understand Secrets and Secure Collaboration
-
-
 ---
 
 
@@ -100,21 +86,20 @@ Many large organisations will not be able to use public GitHub or docker hub, fo
 
 ## Workshop Structure
 
-Each numbered directory corresponds to a key module in the learning journey:
+Each section corresponds to a key module in the learning journey:
 
-```text
-├── 00-insomnia-overview
-├── 01-project-setup-and-git-integration
-├── 02-designing-an-api-specification
-├── 03-collections 
-├── 04-scripting-and-testing 
-├── 05-custom-linting 
-├── 06-CICD-testing 
-├── 07-mocking 
-└── 08-secrets-and-secure-collaboration
-```
+0. Insomnia Overview
+2. Project Setup and Git Integration
+3. Building the API Specification
+4. Collections and Scripting
+5. Creating Test Suites and Extending the Specification
+6. Custom Linting with Spectral in Insomnia
+7. CI/CD Testing with Inso CLI
+8. Mocking
+9. Secrets and Secure Collaboration
 
-Each subdirectory includes one or more markdown files detailing the steps, objectives, and exercises for that section. Some modules also contain screenshots, YAML configs, or example response data to help guide the learning process.
+
+Each one includes objectives, and exercises for that section. Some modules also contain screenshots, YAML configs, or example response data to help guide the learning process.
 
 ## Other Supporting Repositories
 
@@ -186,16 +171,8 @@ In order for a customer's employees to undertake the course, the following artef
 
 ## Where to Start
 
-The process should begin with [00-insomnia-overview](./00-insomnia-overview/00-01-insomnia-overview-README.md), and teams should progress through each module in order. By the end, they will have developed a fully defined and testable API workflow — ready to integrate into their organisation’s `APIOps` pipeline.
+The process should begin with **Module 0: Insomnia Overview**, and teams should progress through each module in order. By the end, they will have developed a fully defined and testable API workflow — ready to integrate into their organisation’s `APIOps` pipeline.
 The content has also been structured to support flexibility. Teams can choose to start with a specific module and import all previous improvements up to that point. This allows them to dive directly into a topic of interest without having to complete every preceding module first.
 
 
-
-# Expected Duration
-
-* Prerequisite Environment Setup (20 minutes)
-* Architectural Walkthrough (10 minutes)
-* Sample Application and addressing the use cases (120 minutes)
-<!-- * Observability (20 minutes) -->
-* Next Steps and Cleanup (5 min)
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>03 - Collections and Scripting :: APIOps with Kong Konnect and Insomnia</title>
+    <link>http://localhost:1313/03-collections/index.html</link>
+    <description>Now that we have built up our API specification and committed our work, it’s time to move into the Collections phase of the Insomnia workflow.&#xA;In this module, you will:&#xA;Generate a full request collection Understand how a complete specification improves collection generation Add basic scripting to streamline account management Commit your work and merge it back to main Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/03-collections/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

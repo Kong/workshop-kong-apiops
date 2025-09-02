@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>01 - Project Setup and Git Integration :: APIOps with Kong Konnect and Insomnia</title>
+    <link>http://localhost:1313/01-project-setup-and-git-integration/index.html</link>
+    <description>Welcome to the Insomnia Workshop.&#xA;In this course, we will work through the design, testing, and automation of an OpenAPI specification using Insomnia and the Inso CLI. All work will be managed via Git from the start, following best practice for collaborative API development.&#xA;This first module focuses on setting up your project using Git integration with Insomnia v11.&#xA;About This Workshop You will be working with a Git-backed API specification project for the kong-bank Accounts API. The template repository for this service is hosted on your organisation’s GitHub Enterprise instance and will be referenced throughout this workshop as:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/01-project-setup-and-git-integration/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
