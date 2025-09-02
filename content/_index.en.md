@@ -1,5 +1,5 @@
 ---
-title: "APIOps with Kong Konnect and Insomnia"
+title: "APIOps with Insomnia"
 weight: 0
 ---
 

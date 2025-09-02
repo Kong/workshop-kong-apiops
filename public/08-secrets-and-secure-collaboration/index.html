@@ -10,45 +10,45 @@ We will:
 Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="08 - Secrets and Secure Collaboration :: APIOps with Kong Konnect and Insomnia">
+    <meta name="twitter:title" content="08 - Secrets and Secure Collaboration :: APIOps with Insomnia">
     <meta name="twitter:description" content="Managing secrets securely is a vital part of working with APIs, especially in teams and across environments. In this module, we’ll explore how Insomnia supports secret management and how you can integrate with enterprise-grade external vaults to securely store and share sensitive data.
 We will:
 Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:">
     <meta property="og:url" content="http://localhost:1313/08-secrets-and-secure-collaboration/index.html">
-    <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
-    <meta property="og:title" content="08 - Secrets and Secure Collaboration :: APIOps with Kong Konnect and Insomnia">
+    <meta property="og:site_name" content="APIOps with Insomnia">
+    <meta property="og:title" content="08 - Secrets and Secure Collaboration :: APIOps with Insomnia">
     <meta property="og:description" content="Managing secrets securely is a vital part of working with APIs, especially in teams and across environments. In this module, we’ll explore how Insomnia supports secret management and how you can integrate with enterprise-grade external vaults to securely store and share sensitive data.
 We will:
 Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="08 - Secrets and Secure Collaboration :: APIOps with Kong Konnect and Insomnia">
+    <meta itemprop="name" content="08 - Secrets and Secure Collaboration :: APIOps with Insomnia">
     <meta itemprop="description" content="Managing secrets securely is a vital part of working with APIs, especially in teams and across environments. In this module, we’ll explore how Insomnia supports secret management and how you can integrate with enterprise-grade external vaults to securely store and share sensitive data.
 We will:
 Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:">
     <meta itemprop="wordCount" content="1200">
-    <title>08 - Secrets and Secure Collaboration :: APIOps with Kong Konnect and Insomnia</title>
-    <link href="/08-secrets-and-secure-collaboration/index.xml" rel="alternate" type="application/rss+xml" title="08 - Secrets and Secure Collaboration :: APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1756807831" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1756807831" defer></script>
-    <script src="/js/search-lunr.js?1756807831" defer></script>
-    <script src="/js/search.js?1756807831" defer></script>
+    <title>08 - Secrets and Secure Collaboration :: APIOps with Insomnia</title>
+    <link href="/08-secrets-and-secure-collaboration/index.xml" rel="alternate" type="application/rss+xml" title="08 - Secrets and Secure Collaboration :: APIOps with Insomnia">
+    <link href="/css/auto-complete/auto-complete.min.css?1756838021" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756838021" defer></script>
+    <script src="/js/search-lunr.js?1756838021" defer></script>
+    <script src="/js/search.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1756807831";
+      window.relearn.index_js_url="/searchindex.en.js?1756838021";
     </script>
-    <script src="/js/lunr/lunr.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1756807831" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807831" rel="stylesheet">
-    <link href="/css/theme.css?1756807831" rel="stylesheet">
-    <link href="/css/format-html.css?1756807831" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756838021" rel="stylesheet">
+    <link href="/css/theme.css?1756838021" rel="stylesheet">
+    <link href="/css/format-html.css?1756838021" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -160,7 +160,7 @@ Explore how secret management works in Insomnia Compare local secrets with enter
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">08 - Secrets and Secure Collaboration</span><meta itemprop="position" content="2"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">08 - Secrets and Secure Collaboration</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/07-mocking/index.html" title="07 - Mocking (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
@@ -251,8 +251,8 @@ Explore how secret management works in Insomnia Compare local secrets with enter
 </li>
 <li>
 <p>Click next</p>
-<p><a href="#R-image-b0644cb499f33ac5271d0006bcdcea3d" class="lightbox-link"><img alt="<code>transactions-service-import</code>" class="lazy lightbox figure-image" loading="lazy" src="../07-mocking/images/transactions-service-import-git-sync.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b0644cb499f33ac5271d0006bcdcea3d"><img alt="<code>transactions-service-import</code>" class="lazy lightbox lightbox-image" loading="lazy" src="../07-mocking/images/transactions-service-import-git-sync.png"></a></p>
+<p><a href="#R-image-d9f333de2d5529b9b58c7ec77569c349" class="lightbox-link"><img alt="<code>transactions-service-import</code>" class="lazy lightbox figure-image" loading="lazy" src="../07-mocking/images/transactions-service-import-git-sync.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d9f333de2d5529b9b58c7ec77569c349"><img alt="<code>transactions-service-import</code>" class="lazy lightbox lightbox-image" loading="lazy" src="../07-mocking/images/transactions-service-import-git-sync.png"></a></p>
 </li>
 <li>
 <p>Select the repository from the dropdown when it appears.</p>
@@ -265,8 +265,8 @@ Explore how secret management works in Insomnia Compare local secrets with enter
 <p>You will see a notification that Insomnia has found an existing Insomnia specification file and will import it.</p>
 </li>
 </ol>
-<p><a href="#R-image-d38d881d0377ff885ff870580f33d789" class="lightbox-link"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox figure-image" loading="lazy" src="../07-mocking/images/transactions-service-import-files.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d38d881d0377ff885ff870580f33d789"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="../07-mocking/images/transactions-service-import-files.png"></a></p>
+<p><a href="#R-image-2983baa243a2fc2eeab36d4304e5c926" class="lightbox-link"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox figure-image" loading="lazy" src="../07-mocking/images/transactions-service-import-files.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2983baa243a2fc2eeab36d4304e5c926"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="../07-mocking/images/transactions-service-import-files.png"></a></p>
 <h2 id="step-1-understanding-why-secrets-management-matters">Step 1: Understanding Why Secrets Management Matters</h2>
 <p>Secrets like API keys, tokens, and credentials should <strong>never be stored in plaintext</strong> or committed to source control. Insomnia provides secure and flexible options to keep sensitive data safe while still enabling teams to collaborate effectively.</p>
 <h2 id="step-2-creating-a-feature-branch">Step 2: Creating a Feature Branch</h2>
@@ -291,14 +291,14 @@ provide therefore the following steps are just for reference.</p>
 <p>To set up a Private Vault:</p>
 <ol>
 <li>Navigate to <code>Insomnia</code> → <code>Settings</code> → <code>Generate Vault Key</code> and generate your Vault Key.
-<a href="#R-image-00921e7498c08164cd0475b727a014be" class="lightbox-link"><img alt="<code>transactions-service-settings-gen-key-vault</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setting-vault-gen.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-00921e7498c08164cd0475b727a014be"><img alt="<code>transactions-service-settings-gen-key-vault</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setting-vault-gen.png"></a></li>
+<a href="#R-image-a848a297bd6053e0aeca741a89520cfb" class="lightbox-link"><img alt="<code>transactions-service-settings-gen-key-vault</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setting-vault-gen.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a848a297bd6053e0aeca741a89520cfb"><img alt="<code>transactions-service-settings-gen-key-vault</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setting-vault-gen.png"></a></li>
 <li>Copy the generated key somewhere safe</li>
 <li>In your environment settings, create a <strong>Private Sub-Environment</strong>.
-<a href="#R-image-f1f686f436d6f6b64106661ca0f05a07" class="lightbox-link"><img alt="<code>transactions-service-settings-edit-vault-env</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-edit-env-vault.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f1f686f436d6f6b64106661ca0f05a07"><img alt="<code>transactions-service-settings-edit-vault-env</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-edit-env-vault.png"></a>
-<a href="#R-image-e994e4448440c84b20a5cc92fbef8fe3" class="lightbox-link"><img alt="<code>transactions-service-create-private-env</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-private-env-create.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e994e4448440c84b20a5cc92fbef8fe3"><img alt="<code>transactions-service-create-private-env</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-private-env-create.png"></a></li>
+<a href="#R-image-ed39be8e314a9e365fa2673f2fa5a846" class="lightbox-link"><img alt="<code>transactions-service-settings-edit-vault-env</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-edit-env-vault.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ed39be8e314a9e365fa2673f2fa5a846"><img alt="<code>transactions-service-settings-edit-vault-env</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-edit-env-vault.png"></a>
+<a href="#R-image-b9826dd5f596652a7598405430b80161" class="lightbox-link"><img alt="<code>transactions-service-create-private-env</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-private-env-create.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9826dd5f596652a7598405430b80161"><img alt="<code>transactions-service-create-private-env</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-private-env-create.png"></a></li>
 <li>Add secret variables, setting the type to <code>Secret</code>.</li>
 </ol>
 <p><strong>Note:</strong> Local secrets cannot be shared — ideal for individual developer use only.</p>
@@ -330,8 +330,8 @@ there is a helper script to get these credentials in the <code>transactions-serv
 <li>Navigate to <code>Insomnia</code> → <code>Settings</code> → <code>Cloud Credentials</code></li>
 <li>Click Add Credentials</li>
 <li>Select HashiCorp Vault
-<a href="#R-image-8b16a61f542db1d0f5098b8f69a66e8f" class="lightbox-link"><img alt="<code>transactions-service-setup-hcv</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b16a61f542db1d0f5098b8f69a66e8f"><img alt="<code>transactions-service-setup-hcv</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv.png"></a></li>
+<a href="#R-image-2d033d7ae46011f553542580ecc39dd5" class="lightbox-link"><img alt="<code>transactions-service-setup-hcv</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d033d7ae46011f553542580ecc39dd5"><img alt="<code>transactions-service-setup-hcv</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv.png"></a></li>
 <li>Input the following:
 <ul>
 <li>Credential Name: <code>local-hcv</code></li>
@@ -340,8 +340,8 @@ there is a helper script to get these credentials in the <code>transactions-serv
 <li>Authentication Method: <code>AppRole</code></li>
 <li>Role ID: (your retrieved role-id)</li>
 <li>Secret ID: (your retrieved secret-id)
-<a href="#R-image-b520611725a7872aa8706045ea3166c2" class="lightbox-link"><img alt="<code>transactions-service-hcv-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv-details.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b520611725a7872aa8706045ea3166c2"><img alt="<code>transactions-service-hcv-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv-details.png"></a></li>
+<a href="#R-image-d0b21afd33f77507ba6eef0ae12cf643" class="lightbox-link"><img alt="<code>transactions-service-hcv-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv-details.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0b21afd33f77507ba6eef0ae12cf643"><img alt="<code>transactions-service-hcv-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-setup-hcv-details.png"></a></li>
 </ul>
 </li>
 <li>Save the credential</li>
@@ -357,8 +357,8 @@ there is a helper script to get these credentials in the <code>transactions-serv
 </li>
 <li>
 <p>Add a new variable called <code>api_key</code>
-<a href="#R-image-50870945b9582077818fc1e4d8d7151c" class="lightbox-link"><img alt="<code>transactions-service-env-var-select</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-50870945b9582077818fc1e4d8d7151c"><img alt="<code>transactions-service-env-var-select</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png"></a></p>
+<a href="#R-image-eaf9c7c4d93895a0a0f7c303fb0ba811" class="lightbox-link"><img alt="<code>transactions-service-env-var-select</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eaf9c7c4d93895a0a0f7c303fb0ba811"><img alt="<code>transactions-service-env-var-select</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png"></a></p>
 </li>
 <li>
 <p>Right click in the value field and select external vault then HashiCorp Vault</p>
@@ -396,10 +396,10 @@ there is a helper script to get these credentials in the <code>transactions-serv
   </tbody>
 </table>
 <p>The live preview should automatically update with the secret value
-<a href="#R-image-2b06b950051b9001586da28d5a4618b5" class="lightbox-link"><img alt="<code>transactions-service-create-env-var</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b06b950051b9001586da28d5a4618b5"><img alt="<code>transactions-service-create-env-var</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var.png"></a></p>
-<p><a href="#R-image-a266fa3ab33594cbe02e68fb6ad06666" class="lightbox-link"><img alt="<code>transactions-service-env-var-done</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-done.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a266fa3ab33594cbe02e68fb6ad06666"><img alt="<code>transactions-service-env-var-done</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-done.png"></a></p>
+<a href="#R-image-1724782362148b93ec80e38f2731dc56" class="lightbox-link"><img alt="<code>transactions-service-create-env-var</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1724782362148b93ec80e38f2731dc56"><img alt="<code>transactions-service-create-env-var</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var.png"></a></p>
+<p><a href="#R-image-c1bc5306ff1e4c61e838cbcae68a31ee" class="lightbox-link"><img alt="<code>transactions-service-env-var-done</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-done.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1bc5306ff1e4c61e838cbcae68a31ee"><img alt="<code>transactions-service-env-var-done</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-done.png"></a></p>
 </li>
 </ol>
 <h3 id="commit-your-environment-configuration">Commit Your Environment Configuration</h3>
@@ -424,12 +424,12 @@ there is a helper script to get these credentials in the <code>transactions-serv
 <li>Choose <code>API Key</code> from the drop-down list</li>
 <li>Set the key name to <code>X-BanKong-API-Key</code></li>
 <li>Set the key value to <code>{{ api_key }}</code>
-<a href="#R-image-26adda15a1d0e8bc9c87dad1352fc582" class="lightbox-link"><img alt="<code>transactions-service-vault-api-key</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-request-vault-api-key.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-26adda15a1d0e8bc9c87dad1352fc582"><img alt="<code>transactions-service-vault-api-key</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-request-vault-api-key.png"></a></li>
+<a href="#R-image-38e712e3486fb50a0d16453a09883d58" class="lightbox-link"><img alt="<code>transactions-service-vault-api-key</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-request-vault-api-key.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-38e712e3486fb50a0d16453a09883d58"><img alt="<code>transactions-service-vault-api-key</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-request-vault-api-key.png"></a></li>
 <li>Make a request from the GET health request, and view that the console displays the decoded API key secret</li>
 <li>You&rsquo;ll see the value remains masked in the editor but will be correctly injected during request execution.
-<a href="#R-image-f94b0d308dd532808903698325b1167a" class="lightbox-link"><img alt="<code>transactions-service-request-vault-select-api-key</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f94b0d308dd532808903698325b1167a"><img alt="<code>transactions-service-request-vault-select-api-key</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png"></a></li>
+<a href="#R-image-0829d76d4614fbf0e986b9042922b9b1" class="lightbox-link"><img alt="<code>transactions-service-request-vault-select-api-key</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0829d76d4614fbf0e986b9042922b9b1"><img alt="<code>transactions-service-request-vault-select-api-key</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-vault-env-var-select.png"></a></li>
 </ol>
 <h3 id="commit-your-request-updates">Commit Your Request Updates</h3>
 <p>After updating requests to use vault variables:</p>
@@ -443,8 +443,8 @@ there is a helper script to get these credentials in the <code>transactions-serv
 </li>
 <li>
 <p>Inspect your commit changes to make sure no sensitive data is shared in source control
-<a href="#R-image-05a3b6302982c5fb4a6a91458b87d01c" class="lightbox-link"><img alt="<code>transactions-service-commit-log</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-commit-log.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-05a3b6302982c5fb4a6a91458b87d01c"><img alt="<code>transactions-service-commit-log</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-commit-log.png"></a></p>
+<a href="#R-image-256ee8bba73e7c668bef98057cebfd93" class="lightbox-link"><img alt="<code>transactions-service-commit-log</code>" class="lazy lightbox figure-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-commit-log.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-256ee8bba73e7c668bef98057cebfd93"><img alt="<code>transactions-service-commit-log</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/08-secrets-and-secure-collaboration/images/transactions-service-commit-log.png"></a></p>
 </li>
 <li>
 <p>Push your changes</p>
@@ -481,7 +481,7 @@ there is a helper script to get these credentials in the <code>transactions-serv
       <div id="R-header-wrapper" class="default-animation">
         <div id="R-header" class="default-animation">
           <a id="R-logo" class="R-default" href="/index.html">
-            <div class="logo-title">APIOps with Kong Konnect and Insomnia</div>
+            <div class="logo-title">APIOps with Insomnia</div>
           </a>
         </div>
         <search><form action="/search/index.html" method="get">
@@ -542,8 +542,8 @@ there is a helper script to get these credentials in the <code>transactions-serv
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1756807831" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807831" defer></script>
-    <script src="/js/theme.js?1756807831" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756838021" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756838021" defer></script>
+    <script src="/js/theme.js?1756838021" defer></script>
   </body>
 </html>

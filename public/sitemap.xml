@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/00-insomnia-overview/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/01-project-setup-and-git-integration/index.html</loc>
   </url>
   <url>
@@ -23,9 +26,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/00-insomnia-overview/index.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/index.html</loc>

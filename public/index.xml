@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>APIOps with Kong Konnect and Insomnia</title>
+    <title>APIOps with Insomnia</title>
     <link>http://localhost:1313/index.html</link>
     <description>Introduction Insomnia is an open source desktop application that simplifies designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality, like authentication helpers, code generation, and environment variables.&#xA;Workshop Overview Since that content was first developed, Insomnia has evolved significantly, especially with the release of Insomnia v11, which introduced:&#xA;A new Git-based storage model (no longer relying on a .insomnia directory) Enhanced scripting support (pre-request and post-response) Secure secret handling via local and external enterprise vaults Support for mocking APIs during design and development This workshop focuses heavily on helping enterprise teams adopt modern workflows using Git-backed projects, external vault integrations, custom-linting and secrets from external vaults.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>00 - Insomnia Overview</title>
+      <link>http://localhost:1313/00-insomnia-overview/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/00-insomnia-overview/index.html</guid>
+      <description>Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.&#xA;With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.&#xA;What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:</description>
+    </item>
     <item>
       <title>01 - Project Setup and Git Integration</title>
       <link>http://localhost:1313/01-project-setup-and-git-integration/index.html</link>
@@ -62,13 +69,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</guid>
       <description>Managing secrets securely is a vital part of working with APIs, especially in teams and across environments. In this module, we’ll explore how Insomnia supports secret management and how you can integrate with enterprise-grade external vaults to securely store and share sensitive data.&#xA;We will:&#xA;Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:</description>
-    </item>
-    <item>
-      <title>00 - Insomnia Overview</title>
-      <link>http://localhost:1313/00-insomnia-overview/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/00-insomnia-overview/index.html</guid>
-      <description>Insomnia is a collaborative integrated development environment (IDE) designed specifically for modern API workflows. It enables fast, iterative production of well-defined and consumable APIs.&#xA;With Insomnia, you can design, debug, test, and document your API — all from a single interface. Whether you’re working solo or across a team, Insomnia helps accelerate development while ensuring your APIs are robust and production-ready.&#xA;What Insomnia Offers Insomnia provides a user-friendly interface that allows developers to:</description>
     </item>
   </channel>
 </rss>

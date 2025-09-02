@@ -10,45 +10,45 @@ Mocking is an important capability in modern API design and development. It allo
 Work in parallel — consumers can develop against a stable interface before the backend is live. Prototype integrations without depending on backend uptime. Validate request/response formats early and often. Insomnia supports two modes of mocking:">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="07 - Mocking :: APIOps with Kong Konnect and Insomnia">
+    <meta name="twitter:title" content="07 - Mocking :: APIOps with Insomnia">
     <meta name="twitter:description" content="In this module, we explore the value of API mocking and demonstrate how to use Insomnia’s self-hosted mocking to support dependent service development — in our case, the transactions-service which relies on the accounts-service.
 Mocking is an important capability in modern API design and development. It allows teams to:
 Work in parallel — consumers can develop against a stable interface before the backend is live. Prototype integrations without depending on backend uptime. Validate request/response formats early and often. Insomnia supports two modes of mocking:">
     <meta property="og:url" content="http://localhost:1313/07-mocking/index.html">
-    <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
-    <meta property="og:title" content="07 - Mocking :: APIOps with Kong Konnect and Insomnia">
+    <meta property="og:site_name" content="APIOps with Insomnia">
+    <meta property="og:title" content="07 - Mocking :: APIOps with Insomnia">
     <meta property="og:description" content="In this module, we explore the value of API mocking and demonstrate how to use Insomnia’s self-hosted mocking to support dependent service development — in our case, the transactions-service which relies on the accounts-service.
 Mocking is an important capability in modern API design and development. It allows teams to:
 Work in parallel — consumers can develop against a stable interface before the backend is live. Prototype integrations without depending on backend uptime. Validate request/response formats early and often. Insomnia supports two modes of mocking:">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="07 - Mocking :: APIOps with Kong Konnect and Insomnia">
+    <meta itemprop="name" content="07 - Mocking :: APIOps with Insomnia">
     <meta itemprop="description" content="In this module, we explore the value of API mocking and demonstrate how to use Insomnia’s self-hosted mocking to support dependent service development — in our case, the transactions-service which relies on the accounts-service.
 Mocking is an important capability in modern API design and development. It allows teams to:
 Work in parallel — consumers can develop against a stable interface before the backend is live. Prototype integrations without depending on backend uptime. Validate request/response formats early and often. Insomnia supports two modes of mocking:">
     <meta itemprop="wordCount" content="1904">
-    <title>07 - Mocking :: APIOps with Kong Konnect and Insomnia</title>
-    <link href="/07-mocking/index.xml" rel="alternate" type="application/rss+xml" title="07 - Mocking :: APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1756807831" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1756807831" defer></script>
-    <script src="/js/search-lunr.js?1756807831" defer></script>
-    <script src="/js/search.js?1756807831" defer></script>
+    <title>07 - Mocking :: APIOps with Insomnia</title>
+    <link href="/07-mocking/index.xml" rel="alternate" type="application/rss+xml" title="07 - Mocking :: APIOps with Insomnia">
+    <link href="/css/auto-complete/auto-complete.min.css?1756838021" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756838021" defer></script>
+    <script src="/js/search-lunr.js?1756838021" defer></script>
+    <script src="/js/search.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1756807831";
+      window.relearn.index_js_url="/searchindex.en.js?1756838021";
     </script>
-    <script src="/js/lunr/lunr.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1756807831" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807831" rel="stylesheet">
-    <link href="/css/theme.css?1756807831" rel="stylesheet">
-    <link href="/css/format-html.css?1756807831" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756838021" rel="stylesheet">
+    <link href="/css/theme.css?1756838021" rel="stylesheet">
+    <link href="/css/format-html.css?1756838021" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -158,7 +158,7 @@ Work in parallel — consumers can develop against a stable interface before the
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">07 - Mocking</span><meta itemprop="position" content="2"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">07 - Mocking</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/06-cicd-testing/index.html" title="06 - CI/CD Testing with Inso CLI (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
@@ -311,8 +311,8 @@ Work in parallel — consumers can develop against a stable interface before the
 </li>
 <li>
 <p>Click next</p>
-<p><a href="#R-image-4f62625303cf8178a0e2b017e5cfea95" class="lightbox-link"><img alt="<code>transactions-service-import</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-import-git-sync.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f62625303cf8178a0e2b017e5cfea95"><img alt="<code>transactions-service-import</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-import-git-sync.png"></a></p>
+<p><a href="#R-image-432d78dc0f78143f90632c64348d4683" class="lightbox-link"><img alt="<code>transactions-service-import</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-import-git-sync.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-432d78dc0f78143f90632c64348d4683"><img alt="<code>transactions-service-import</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-import-git-sync.png"></a></p>
 </li>
 <li>
 <p>Select the repository from the dropdown when it appears.</p>
@@ -325,8 +325,8 @@ Work in parallel — consumers can develop against a stable interface before the
 <p>You will see a notification that Insomnia has found an existing Insomnia file and will import it.</p>
 </li>
 </ol>
-<p><a href="#R-image-36261ebf25d1d6607e26c26f1a355892" class="lightbox-link"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-import-files.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-36261ebf25d1d6607e26c26f1a355892"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-import-files.png"></a></p>
+<p><a href="#R-image-de1a91555f18d0f7cd88d92c9288068c" class="lightbox-link"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-import-files.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-de1a91555f18d0f7cd88d92c9288068c"><img alt="<code>transactions-service-import-files</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-import-files.png"></a></p>
 <h3 id="prerequisite-step-3-make-sure-the-accounts-service-is-running">Prerequisite Step 3: Make Sure the <code>accounts-service</code> is Running</h3>
 <p>To generate a working mock of the <code>accounts-service</code>, we need to send real requests to its implementation. Insomnia will capture the live responses and use them to populate the mock routes.</p>
 <p>If you&rsquo;ve followed along with the previous modules, your <code>accounts-service</code> project should already contain all the required requests. In this case, you simply need to ensure the implementation is running locally.</p>
@@ -373,8 +373,8 @@ Make sure you have the <code>accounts-service</code> project selected in Insomni
 <ol>
 <li>Click + Create → Mock Server.</li>
 </ol>
-<p><a href="#R-image-9a02c27ecc28ff25959ca5ccf352c4fe" class="lightbox-link"><img alt="<code>transactions-service-create-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-create-mock.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a02c27ecc28ff25959ca5ccf352c4fe"><img alt="<code>transactions-service-create-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-create-mock.png"></a></p>
+<p><a href="#R-image-f047e4771381c269bc224f3dfe382aba" class="lightbox-link"><img alt="<code>transactions-service-create-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-create-mock.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f047e4771381c269bc224f3dfe382aba"><img alt="<code>transactions-service-create-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-create-mock.png"></a></p>
 <p>Set the following details:</p>
 <ul>
 <li>Name: <code>accounts-service-mock</code></li>
@@ -382,8 +382,8 @@ Make sure you have the <code>accounts-service</code> project selected in Insomni
 <li>Folder where the file will be saved in the repository: <code>mocks/</code> folder</li>
 <li>Self-hosted mock server URL: <code>http://localhost:8080</code></li>
 </ul>
-<p><a href="#R-image-a4f21eb7c6babe76c9e097cb0f04166c" class="lightbox-link"><img alt="<code>transactions-service-mock-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-mock-details.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4f21eb7c6babe76c9e097cb0f04166c"><img alt="<code>transactions-service-mock-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-mock-details.png"></a></p>
+<p><a href="#R-image-5406415f58ea1976c9be1cc8d2b2e98d" class="lightbox-link"><img alt="<code>transactions-service-mock-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-mock-details.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5406415f58ea1976c9be1cc8d2b2e98d"><img alt="<code>transactions-service-mock-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-mock-details.png"></a></p>
 <h3 id="commit-your-mock-server-configuration">Commit Your Mock Server Configuration</h3>
 <p>After creating the mock server:</p>
 <ol>
@@ -416,8 +416,8 @@ For each request:</p>
 </li>
 <li>
 <p>Accept the default route name</p>
-<p><a href="#R-image-602765bea349868dc77429333edb0971" class="lightbox-link"><img alt="<code>transactions-service-generate-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-generate-mock.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-602765bea349868dc77429333edb0971"><img alt="<code>transactions-service-generate-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-generate-mock.png"></a></p>
+<p><a href="#R-image-0a76f38cbd9a0cb86e5c640986ac3107" class="lightbox-link"><img alt="<code>transactions-service-generate-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-generate-mock.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a76f38cbd9a0cb86e5c640986ac3107"><img alt="<code>transactions-service-generate-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-generate-mock.png"></a></p>
 </li>
 <li>
 <p>For methods like HEAD, ensure you manually update the method from GET to HEAD after creating the route.</p>
@@ -428,8 +428,8 @@ Insomnia defaults new mock routes to the GET method. This default behavior can c
 Always add the GET route last to avoid this conflict.</p>
 </li>
 </ol>
-<p><a href="#R-image-3f9970e6a3e09a6f950351b1addd9508" class="lightbox-link"><img alt="<code>transactions-service-update-mock-request</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-update-mock-request.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f9970e6a3e09a6f950351b1addd9508"><img alt="<code>transactions-service-update-mock-request</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-update-mock-request.png"></a></p>
+<p><a href="#R-image-0c8fa427f9830f35045c2d10368d2905" class="lightbox-link"><img alt="<code>transactions-service-update-mock-request</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-update-mock-request.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c8fa427f9830f35045c2d10368d2905"><img alt="<code>transactions-service-update-mock-request</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-update-mock-request.png"></a></p>
 <p>Repeat this for:</p>
 <ul>
 <li>HEAD <code>/health</code></li>
@@ -472,8 +472,8 @@ Make sure you have the <code>transactions-service</code> project selected in Ins
 <li>Click the Duplicate button</li>
 <li>Set the destination to the <code>transactions-service-&lt;your-initials&gt;</code> project</li>
 </ol>
-<p><a href="#R-image-e972da206b24d9cff561d7dd9cc2b235" class="lightbox-link"><img alt="<code>transactions-service-move-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-move-mock.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e972da206b24d9cff561d7dd9cc2b235"><img alt="<code>transactions-service-move-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-move-mock.png"></a></p>
+<p><a href="#R-image-58bc3561f10fcecbcc2fe76897288ad9" class="lightbox-link"><img alt="<code>transactions-service-move-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-move-mock.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-58bc3561f10fcecbcc2fe76897288ad9"><img alt="<code>transactions-service-move-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-move-mock.png"></a></p>
 <h2 id="step-7-using-the-mock-in-the-transactions-api">Step 7: Using the Mock in the Transactions API</h2>
 <p>Now let&rsquo;s consume the mock from another service.</p>
 <h3 id="extract-required-details">Extract Required Details</h3>
@@ -488,8 +488,8 @@ Make sure you have the <code>transactions-service</code> project selected in Ins
 </ul>
 </li>
 </ol>
-<p><a href="#R-image-bd665bdb2952bebf2ad2914ed5e74e7b" class="lightbox-link"><img alt="<code>transactions-service-copy-mock-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-copy-mock-details.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd665bdb2952bebf2ad2914ed5e74e7b"><img alt="<code>transactions-service-copy-mock-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-copy-mock-details.png"></a></p>
+<p><a href="#R-image-afe18e5c46b01227dce26e798e16399d" class="lightbox-link"><img alt="<code>transactions-service-copy-mock-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-copy-mock-details.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-afe18e5c46b01227dce26e798e16399d"><img alt="<code>transactions-service-copy-mock-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-copy-mock-details.png"></a></p>
 <p>Now use the mock hash value as the value for the <code>MOCK_PATH_ID</code> environment variable when starting docker compose.
 Run the following now to start the transactions-service and its supporting services:</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MOCK_PATH_ID<span style="color:#f92672">=</span>&lt;value-of-mock-hash&gt; docker compose up -d</span></span></code></pre></div>
@@ -514,15 +514,15 @@ Run the following now to start the transactions-service and its supporting servi
 <li>Add a <code>accountId</code> to match the one from the mock URL
 (e.g., 696d0848-b30a-4c9e-b2c7-108aeacc8432)</li>
 </ol>
-<p><a href="#R-image-627f192ed2057ec93e5a5e9cbc1488f4" class="lightbox-link"><img alt="<code>transactions-service-edit-environment</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-edit-environment.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-627f192ed2057ec93e5a5e9cbc1488f4"><img alt="<code>transactions-service-edit-environment</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-edit-environment.png"></a>
-<a href="#R-image-aac15fdfc022f06b29d3a4d50230e7c5" class="lightbox-link"><img alt="<code>transactions-service-update-environment-account-id</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-update-environment-account-id.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aac15fdfc022f06b29d3a4d50230e7c5"><img alt="<code>transactions-service-update-environment-account-id</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-update-environment-account-id.png"></a></p>
+<p><a href="#R-image-422dfb65c10cbdff37548a76b52cda35" class="lightbox-link"><img alt="<code>transactions-service-edit-environment</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-edit-environment.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-422dfb65c10cbdff37548a76b52cda35"><img alt="<code>transactions-service-edit-environment</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-edit-environment.png"></a>
+<a href="#R-image-1706cb12d2d26344d1909c4354ec6033" class="lightbox-link"><img alt="<code>transactions-service-update-environment-account-id</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-update-environment-account-id.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1706cb12d2d26344d1909c4354ec6033"><img alt="<code>transactions-service-update-environment-account-id</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-update-environment-account-id.png"></a></p>
 <p>Now, you can run each request in the collection — all of which will interact with the mock <code>accounts-service</code>!</p>
-<p><a href="#R-image-4beac433b9f625dc47199aa3b224290e" class="lightbox-link"><img alt="<code>transactions-service-health-check-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-health-check-mock.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4beac433b9f625dc47199aa3b224290e"><img alt="<code>transactions-service-health-check-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-health-check-mock.png"></a>
-<a href="#R-image-ff46c926ff8b080caf86487a96c50e20" class="lightbox-link"><img alt="<code>transactions-service-credit-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-credit-mock.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ff46c926ff8b080caf86487a96c50e20"><img alt="<code>transactions-service-credit-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-credit-mock.png"></a></p>
+<p><a href="#R-image-a1c23b8c1ff755114c238177b7572773" class="lightbox-link"><img alt="<code>transactions-service-health-check-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-health-check-mock.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a1c23b8c1ff755114c238177b7572773"><img alt="<code>transactions-service-health-check-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-health-check-mock.png"></a>
+<a href="#R-image-1eaa423bd2ee116361c170742d4f5654" class="lightbox-link"><img alt="<code>transactions-service-credit-mock</code>" class="lazy lightbox figure-image" loading="lazy" src="/07-mocking/images/transactions-service-credit-mock.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1eaa423bd2ee116361c170742d4f5654"><img alt="<code>transactions-service-credit-mock</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/07-mocking/images/transactions-service-credit-mock.png"></a></p>
 <h3 id="commit-environment-updates">Commit Environment Updates</h3>
 <p>After updating the environment:</p>
 <ol>
@@ -571,7 +571,7 @@ Run the following now to start the transactions-service and its supporting servi
       <div id="R-header-wrapper" class="default-animation">
         <div id="R-header" class="default-animation">
           <a id="R-logo" class="R-default" href="/index.html">
-            <div class="logo-title">APIOps with Kong Konnect and Insomnia</div>
+            <div class="logo-title">APIOps with Insomnia</div>
           </a>
         </div>
         <search><form action="/search/index.html" method="get">
@@ -632,8 +632,8 @@ Run the following now to start the transactions-service and its supporting servi
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1756807831" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807831" defer></script>
-    <script src="/js/theme.js?1756807831" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756838021" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756838021" defer></script>
+    <script src="/js/theme.js?1756838021" defer></script>
   </body>
 </html>

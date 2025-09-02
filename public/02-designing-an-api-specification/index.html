@@ -10,45 +10,45 @@ By the end of this module, you’ll have:
 Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="02 - Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta name="twitter:title" content="02 - Building the API Specification :: APIOps with Insomnia">
     <meta name="twitter:description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
 By the end of this module, you’ll have:
 Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
     <meta property="og:url" content="http://localhost:1313/02-designing-an-api-specification/index.html">
-    <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
-    <meta property="og:title" content="02 - Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta property="og:site_name" content="APIOps with Insomnia">
+    <meta property="og:title" content="02 - Building the API Specification :: APIOps with Insomnia">
     <meta property="og:description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
 By the end of this module, you’ll have:
 Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="02 - Building the API Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta itemprop="name" content="02 - Building the API Specification :: APIOps with Insomnia">
     <meta itemprop="description" content="In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.
 By the end of this module, you’ll have:
 Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.">
     <meta itemprop="wordCount" content="2364">
-    <title>02 - Building the API Specification :: APIOps with Kong Konnect and Insomnia</title>
-    <link href="/02-designing-an-api-specification/index.xml" rel="alternate" type="application/rss+xml" title="02 - Building the API Specification :: APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1756807831" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1756807831" defer></script>
-    <script src="/js/search-lunr.js?1756807831" defer></script>
-    <script src="/js/search.js?1756807831" defer></script>
+    <title>02 - Building the API Specification :: APIOps with Insomnia</title>
+    <link href="/02-designing-an-api-specification/index.xml" rel="alternate" type="application/rss+xml" title="02 - Building the API Specification :: APIOps with Insomnia">
+    <link href="/css/auto-complete/auto-complete.min.css?1756838021" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756838021" defer></script>
+    <script src="/js/search-lunr.js?1756838021" defer></script>
+    <script src="/js/search.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1756807831";
+      window.relearn.index_js_url="/searchindex.en.js?1756838021";
     </script>
-    <script src="/js/lunr/lunr.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1756807831" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807831" rel="stylesheet">
-    <link href="/css/theme.css?1756807831" rel="stylesheet">
-    <link href="/css/format-html.css?1756807831" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756838021" rel="stylesheet">
+    <link href="/css/theme.css?1756838021" rel="stylesheet">
+    <link href="/css/format-html.css?1756838021" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -145,7 +145,7 @@ Created a Git-tracked design document Defined a valid and useful OpenAPI specifi
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">02 - Building the API Specification</span><meta itemprop="position" content="2"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">02 - Building the API Specification</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/01-project-setup-and-git-integration/index.html" title="01 - Project Setup and Git Integration (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
@@ -197,8 +197,8 @@ Created a Git-tracked design document Defined a valid and useful OpenAPI specifi
 <p>Let&rsquo;s create a new <code>OpenAPI</code> design document inside the Git project.</p>
 <ol>
 <li>Click the <code>+ Create</code> button and choose <strong>Design Document</strong>.
-<a href="#R-image-c5275227f883b86cbeefcb3b70fa56ac" class="lightbox-link"><img alt="<code>create-document</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-create-design-document.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c5275227f883b86cbeefcb3b70fa56ac"><img alt="<code>create-document</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-create-design-document.png"></a></li>
+<a href="#R-image-a7bdbf0462e8d7db5f9794d029727373" class="lightbox-link"><img alt="<code>create-document</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-create-design-document.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a7bdbf0462e8d7db5f9794d029727373"><img alt="<code>create-document</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-create-design-document.png"></a></li>
 <li>Set:
 <ul>
 <li>Name: <code>accounts-service</code></li>
@@ -206,8 +206,8 @@ Created a Git-tracked design document Defined a valid and useful OpenAPI specifi
 </ul>
 </li>
 <li>Click <strong>Create Document</strong>.
-<a href="#R-image-8d34f0a59bb21c56327fb3e5120591b4" class="lightbox-link"><img alt="<code>create-document-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-design-document-details.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8d34f0a59bb21c56327fb3e5120591b4"><img alt="<code>create-document-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-design-document-details.png"></a>
+<a href="#R-image-59e1b5ecd63cd31060d25e7b573d759b" class="lightbox-link"><img alt="<code>create-document-details</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-design-document-details.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-59e1b5ecd63cd31060d25e7b573d759b"><img alt="<code>create-document-details</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-design-document-details.png"></a>
 You&rsquo;ll now have an empty spec file, fully tracked in Git.</li>
 </ol>
 <h3 id="commit-and-push-your-changes">Commit and Push Your Changes</h3>
@@ -221,8 +221,8 @@ You&rsquo;ll now have an empty spec file, fully tracked in Git.</li>
 <li>Click <strong>Commit</strong>.</li>
 <li>Click <strong>Push</strong> to update your remote repository.</li>
 </ol>
-<p><a href="#R-image-f8c76eab271662653698886ae8d52676" class="lightbox-link"><img alt="<code>commit-1</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f8c76eab271662653698886ae8d52676"><img alt="<code>commit-1</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen.png"></a></p>
+<p><a href="#R-image-fb252c2d2275e033059e7854e3ba2883" class="lightbox-link"><img alt="<code>commit-1</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fb252c2d2275e033059e7854e3ba2883"><img alt="<code>commit-1</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen.png"></a></p>
 <h2 id="step-3-add-a-minimal-valid-openapi-structure">Step 3: Add a Minimal Valid <code>OpenAPI</code> Structure</h2>
 <p>Let&rsquo;s start with the simplest valid <code>OpenAPI</code> structure.</p>
 <p>Paste this into your design document:</p>
@@ -452,8 +452,8 @@ Use the Insomnia Git commit menu:</p>
 <li>Click <strong>Commit</strong>.</li>
 <li>Click <strong>Push</strong> to update your remote repository.</li>
 </ol>
-<p><a href="#R-image-86506dc59ee31f1354bc2b3c1a6e4888" class="lightbox-link"><img alt="<code>commit-screen-2</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-86506dc59ee31f1354bc2b3c1a6e4888"><img alt="<code>commit-screen-2</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen-2.png"></a></p>
+<p><a href="#R-image-2101971032149efa0433f36e2e8bad5d" class="lightbox-link"><img alt="<code>commit-screen-2</code>" class="lazy lightbox figure-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2101971032149efa0433f36e2e8bad5d"><img alt="<code>commit-screen-2</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/02-designing-an-api-specification/images/accounts-service-commit-screen-2.png"></a></p>
 <p>Now that we&rsquo;ve constructed basic endpoint in our specification and explored the importance of a complete, linted API design, we are ready to import a fully completed specification for the <code>accounts-service</code>.</p>
 <h2 id="step-6-paste-the-completed-specification">Step 6: Paste the Completed Specification</h2>
 <p>Now, paste the full final spec to finish Module 2 cleanly.</p>
@@ -998,7 +998,7 @@ Use the Insomnia Git commit menu:</p>
       <div id="R-header-wrapper" class="default-animation">
         <div id="R-header" class="default-animation">
           <a id="R-logo" class="R-default" href="/index.html">
-            <div class="logo-title">APIOps with Kong Konnect and Insomnia</div>
+            <div class="logo-title">APIOps with Insomnia</div>
           </a>
         </div>
         <search><form action="/search/index.html" method="get">
@@ -1059,8 +1059,8 @@ Use the Insomnia Git commit menu:</p>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1756807831" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807831" defer></script>
-    <script src="/js/theme.js?1756807831" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756838021" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756838021" defer></script>
+    <script src="/js/theme.js?1756838021" defer></script>
   </body>
 </html>

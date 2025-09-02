@@ -11,48 +11,48 @@ In this module, you will:
 Understand how Test Suites improve API quality Create automated tests linked to your requests Extend the API by adding a DELETE operation Practice versioning and proper Git commit hygiene Commit and push your testing and spec changes Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="04 - Creating Test Suites and Extending the Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta name="twitter:title" content="04 - Creating Test Suites and Extending the Specification :: APIOps with Insomnia">
     <meta name="twitter:description" content="In this module, we move beyond scripting and focus on structured, reusable Test Suites in Insomnia, while also extending our specification with a new DELETE operation.
 With your API specification complete and your collections generated, it’s time to ensure everything works reliably, not just manually, but automatically.
 In this module, you will:
 Understand how Test Suites improve API quality Create automated tests linked to your requests Extend the API by adding a DELETE operation Practice versioning and proper Git commit hygiene Commit and push your testing and spec changes Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.">
     <meta property="og:url" content="http://localhost:1313/04-testing/index.html">
-    <meta property="og:site_name" content="APIOps with Kong Konnect and Insomnia">
-    <meta property="og:title" content="04 - Creating Test Suites and Extending the Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta property="og:site_name" content="APIOps with Insomnia">
+    <meta property="og:title" content="04 - Creating Test Suites and Extending the Specification :: APIOps with Insomnia">
     <meta property="og:description" content="In this module, we move beyond scripting and focus on structured, reusable Test Suites in Insomnia, while also extending our specification with a new DELETE operation.
 With your API specification complete and your collections generated, it’s time to ensure everything works reliably, not just manually, but automatically.
 In this module, you will:
 Understand how Test Suites improve API quality Create automated tests linked to your requests Extend the API by adding a DELETE operation Practice versioning and proper Git commit hygiene Commit and push your testing and spec changes Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="04 - Creating Test Suites and Extending the Specification :: APIOps with Kong Konnect and Insomnia">
+    <meta itemprop="name" content="04 - Creating Test Suites and Extending the Specification :: APIOps with Insomnia">
     <meta itemprop="description" content="In this module, we move beyond scripting and focus on structured, reusable Test Suites in Insomnia, while also extending our specification with a new DELETE operation.
 With your API specification complete and your collections generated, it’s time to ensure everything works reliably, not just manually, but automatically.
 In this module, you will:
 Understand how Test Suites improve API quality Create automated tests linked to your requests Extend the API by adding a DELETE operation Practice versioning and proper Git commit hygiene Commit and push your testing and spec changes Prerequisites If you are starting the course from this module and have not completed the previous steps, you can import the Insomnia metadata to bring you up to date.">
     <meta itemprop="wordCount" content="1550">
-    <title>04 - Creating Test Suites and Extending the Specification :: APIOps with Kong Konnect and Insomnia</title>
-    <link href="/04-testing/index.xml" rel="alternate" type="application/rss+xml" title="04 - Creating Test Suites and Extending the Specification :: APIOps with Kong Konnect and Insomnia">
-    <link href="/css/auto-complete/auto-complete.min.css?1756807831" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1756807831" defer></script>
-    <script src="/js/search-lunr.js?1756807831" defer></script>
-    <script src="/js/search.js?1756807831" defer></script>
+    <title>04 - Creating Test Suites and Extending the Specification :: APIOps with Insomnia</title>
+    <link href="/04-testing/index.xml" rel="alternate" type="application/rss+xml" title="04 - Creating Test Suites and Extending the Specification :: APIOps with Insomnia">
+    <link href="/css/auto-complete/auto-complete.min.css?1756838021" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1756838021" defer></script>
+    <script src="/js/search-lunr.js?1756838021" defer></script>
+    <script src="/js/search.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1756807831";
+      window.relearn.index_js_url="/searchindex.en.js?1756838021";
     </script>
-    <script src="/js/lunr/lunr.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1756807831" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1756807831" defer></script>
+    <script src="/js/lunr/lunr.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1756838021" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1756838021" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756807831" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756807831" rel="stylesheet">
-    <link href="/css/theme.css?1756807831" rel="stylesheet">
-    <link href="/css/format-html.css?1756807831" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1756838021" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1756838021" rel="stylesheet">
+    <link href="/css/theme.css?1756838021" rel="stylesheet">
+    <link href="/css/format-html.css?1756838021" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -155,7 +155,7 @@ Understand how Test Suites improve API quality Create automated tests linked to 
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Kong Konnect and Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">04 - Creating Test Suites and Extending the Specification</span><meta itemprop="position" content="2"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">APIOps with Insomnia</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">04 - Creating Test Suites and Extending the Specification</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/03-collections/index.html" title="03 - Collections and Scripting (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
@@ -220,15 +220,15 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 <li>Create a new branch named: <code>feature/add-test-suites-and-delete-endpoint</code></li>
 <li>Click <strong>Create</strong> to switch to the new branch.</li>
 </ol>
-<p><a href="#R-image-b60a194e5b740b39b4cbef9ea003e70b" class="lightbox-link"><img alt="<code>module-04-feature-branch</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-feature-branch.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b60a194e5b740b39b4cbef9ea003e70b"><img alt="<code>module-04-feature-branch</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-feature-branch.png"></a></p>
+<p><a href="#R-image-ac0d18e0320b9726b8cd59eb6cdb9b17" class="lightbox-link"><img alt="<code>module-04-feature-branch</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-feature-branch.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac0d18e0320b9726b8cd59eb6cdb9b17"><img alt="<code>module-04-feature-branch</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-feature-branch.png"></a></p>
 <h2 id="step-2-create-a-test-suite">Step 2: Create a Test Suite</h2>
 <ol>
 <li>In the <strong>Tests</strong> tab, click <strong>New test suite</strong>.</li>
 <li>Name it: <code>Accounts API Test Suite</code></li>
 </ol>
-<p><a href="#R-image-45d1757745e20f11096ffe22ca454e4a" class="lightbox-link"><img alt="<code>module-04-new-test-suite</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-new-test-suite.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-45d1757745e20f11096ffe22ca454e4a"><img alt="<code>module-04-new-test-suite</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-new-test-suite.png"></a></p>
+<p><a href="#R-image-d0ffd958a6606fe0e5df8bd77c2bf488" class="lightbox-link"><img alt="<code>module-04-new-test-suite</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-new-test-suite.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0ffd958a6606fe0e5df8bd77c2bf488"><img alt="<code>module-04-new-test-suite</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-new-test-suite.png"></a></p>
 <p>This will serve as the container for all your tests.</p>
 <h2 id="step-3-write-tests-for-core-api-endpoints">Step 3: Write Tests for Core API Endpoints</h2>
 <p>We&rsquo;ll now create basic functional tests for key endpoints.</p>
@@ -246,8 +246,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;account_id&#39;</span>).<span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">is</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;string&#39;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;type&#39;</span>).<span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">is</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;string&#39;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;balance&#39;</span>).<span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">is</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;number&#39;</span>);</span></span></code></pre></div>
-<p><a href="#R-image-a6d0a9795ab5e38de0ff09f3cfbcd3a7" class="lightbox-link"><img alt="<code>module-04-create-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-create-account-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6d0a9795ab5e38de0ff09f3cfbcd3a7"><img alt="<code>module-04-create-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-create-account-test.png"></a></p>
+<p><a href="#R-image-250c1a2bc15c7c8e67dd892e9e01f230" class="lightbox-link"><img alt="<code>module-04-create-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-create-account-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-250c1a2bc15c7c8e67dd892e9e01f230"><img alt="<code>module-04-create-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-create-account-test.png"></a></p>
 <h4 id="description-of-the-insomnia-test">Description of the Insomnia Test</h4>
 <p>This Insomnia test script performs the following actions:</p>
 <ol>
@@ -294,8 +294,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accounts</span>[<span style="color:#ae81ff">0</span>];
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;account_id&#39;</span>);
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-<p><a href="#R-image-eee1f015d268ad4a06a329170e35ce62" class="lightbox-link"><img alt="<code>module-04-list-all-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-list-all-account-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-eee1f015d268ad4a06a329170e35ce62"><img alt="<code>module-04-list-all-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-list-all-account-test.png"></a></p>
+<p><a href="#R-image-72eb36b423998df3effff649a66b736d" class="lightbox-link"><img alt="<code>module-04-list-all-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-list-all-account-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-72eb36b423998df3effff649a66b736d"><img alt="<code>module-04-list-all-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-list-all-account-test.png"></a></p>
 <h4 id="description-of-the-list-all-accounts-insomnia-test">Description of the List All Accounts Insomnia Test</h4>
 <p>This Insomnia test script performs the following actions:</p>
 <ol>
@@ -333,8 +333,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">body</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">be</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;string&#39;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">toLowerCase</span>()).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;accounts api&#39;</span>);</span></span></code></pre></div>
-<p><a href="#R-image-dd9c85d7577d1d85daed05720543c6ec" class="lightbox-link"><img alt="<code>module-04-health-check-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-health-check-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd9c85d7577d1d85daed05720543c6ec"><img alt="<code>module-04-health-check-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-health-check-test.png"></a></p>
+<p><a href="#R-image-56465800d145c1f53c5b521e02fa8dc5" class="lightbox-link"><img alt="<code>module-04-health-check-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-health-check-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-56465800d145c1f53c5b521e02fa8dc5"><img alt="<code>module-04-health-check-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-health-check-test.png"></a></p>
 <h4 id="description-of-the-insomnia-health-check-test">Description of the Insomnia Health Check Test</h4>
 <p>This Insomnia test script performs the following actions:</p>
 <ol>
@@ -370,8 +370,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;balance&#39;</span>).<span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">is</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;number&#39;</span>);</span></span></code></pre></div>
-<p><a href="#R-image-9a0d19c74cc4af0dcb7cc486686d82e2" class="lightbox-link"><img alt="<code>module-04-credit-an-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-credit-an-account-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a0d19c74cc4af0dcb7cc486686d82e2"><img alt="<code>module-04-credit-an-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-credit-an-account-test.png"></a></p>
+<p><a href="#R-image-12209c72f73d89248db7651e07a759d4" class="lightbox-link"><img alt="<code>module-04-credit-an-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-credit-an-account-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-12209c72f73d89248db7651e07a759d4"><img alt="<code>module-04-credit-an-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-credit-an-account-test.png"></a></p>
 <h4 id="description-of-the-insomnia-credit-an-account-test">Description of the Insomnia Credit an Account Test</h4>
 <p>This Insomnia test script performs the following actions:</p>
 <ol>
@@ -407,8 +407,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;balance&#39;</span>).<span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">is</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;number&#39;</span>);</span></span></code></pre></div>
-<p><a href="#R-image-094fc57469754cd7777937abd412dea4" class="lightbox-link"><img alt="<code>module-04-debit-an-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-debit-an-account-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-094fc57469754cd7777937abd412dea4"><img alt="<code>module-04-debit-an-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-debit-an-account-test.png"></a></p>
+<p><a href="#R-image-476cdb4823c5b29c31bd9ac645d86ceb" class="lightbox-link"><img alt="<code>module-04-debit-an-account-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-debit-an-account-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-476cdb4823c5b29c31bd9ac645d86ceb"><img alt="<code>module-04-debit-an-account-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-debit-an-account-test.png"></a></p>
 <h4 id="description-of-the-insomnia-debit-an-account-test">Description of the Insomnia Debit an Account Test</h4>
 <p>This Insomnia test script performs the following actions:</p>
 <ol>
@@ -444,8 +444,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">account</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">have</span>.<span style="color:#a6e22e">property</span>(<span style="color:#e6db74">&#39;account_id&#39;</span>).<span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">is</span>.<span style="color:#a6e22e">a</span>(<span style="color:#e6db74">&#39;string&#39;</span>);</span></span></code></pre></div>
-<p><a href="#R-image-7a552ad122c5b355d96cb43933308e3b" class="lightbox-link"><img alt="<code>module-04-get-account-by-id-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-get-account-by-id-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7a552ad122c5b355d96cb43933308e3b"><img alt="<code>module-04-get-account-by-id-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-get-account-by-id-test.png"></a></p>
+<p><a href="#R-image-d0e5a274fd679a211d0058ea828c8573" class="lightbox-link"><img alt="<code>module-04-get-account-by-id-test</code>" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-get-account-by-id-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0e5a274fd679a211d0058ea828c8573"><img alt="<code>module-04-get-account-by-id-test</code>" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-get-account-by-id-test.png"></a></p>
 <h3 id="description-of-the-get-account-by-id-insomnia-test">Description of the Get Account by ID Insomnia Test</h3>
 <p>This Insomnia test script performs the following actions:</p>
 <ol>
@@ -477,8 +477,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 <li>Commit message: <code>chore: Test suite added with tests for all endpoints</code></li>
 <li>Push your changes.</li>
 </ul>
-<p><a href="#R-image-72907eb04f430c0b4a46960fc0de32dd" class="lightbox-link"><img alt="`module-04-commit-1" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-72907eb04f430c0b4a46960fc0de32dd"><img alt="`module-04-commit-1" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-1.png"></a></p>
+<p><a href="#R-image-ceef1e31db00de942325a743ab76e29e" class="lightbox-link"><img alt="`module-04-commit-1" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ceef1e31db00de942325a743ab76e29e"><img alt="`module-04-commit-1" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-1.png"></a></p>
 <h2 id="step-4-extend-the-specification-with-a-delete-endpoint">Step 4: Extend the Specification with a DELETE Endpoint</h2>
 <p>Now let&rsquo;s extend the <code>accounts-service.yaml</code> spec by adding a <code>DELETE /accounts/{accountId}</code> operation.</p>
 <h3 id="increment-the-openapi-version">Increment the <code>OpenAPI</code> Version</h3>
@@ -494,8 +494,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 <li>Commit message: <code>chore: increment API version to 1.1.0 for new DELETE endpoint</code></li>
 <li>Push your changes.</li>
 </ul>
-<p><a href="#R-image-c4b9b1ccdf8ffff5a1b25aa39246dc25" class="lightbox-link"><img alt="`module-04-commit-2" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4b9b1ccdf8ffff5a1b25aa39246dc25"><img alt="`module-04-commit-2" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-2.png"></a></p>
+<p><a href="#R-image-f7b2456ebda6a37364022728393a21be" class="lightbox-link"><img alt="`module-04-commit-2" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7b2456ebda6a37364022728393a21be"><img alt="`module-04-commit-2" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-2.png"></a></p>
 <h3 id="add-the-delete-operation">Add the DELETE Operation</h3>
 <p>Extend the <code>/accounts/{accountId}</code> path:</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#ae81ff">/accounts/{accountId}:</span>
@@ -530,15 +530,15 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">application/json</span>:
 </span></span><span style="display:flex;"><span>              <span style="color:#f92672">schema</span>:
 </span></span><span style="display:flex;"><span>                <span style="color:#f92672">$ref</span>: <span style="color:#e6db74">&#39;#/components/schemas/ErrorResponse&#39;</span></span></span></code></pre></div>
-<p><a href="#R-image-700ad955dae41b865939eac26e4634c8" class="lightbox-link"><img alt="`module-04-delete-spec" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-delete-spec.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-700ad955dae41b865939eac26e4634c8"><img alt="`module-04-delete-spec" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-delete-spec.png"></a></p>
+<p><a href="#R-image-2a7b74adb7f7daa6cab4cb1571b1776a" class="lightbox-link"><img alt="`module-04-delete-spec" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-delete-spec.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2a7b74adb7f7daa6cab4cb1571b1776a"><img alt="`module-04-delete-spec" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-delete-spec.png"></a></p>
 <p><strong>Commit and Push:</strong></p>
 <ul>
 <li>Commit message: <code>feat: add DELETE /accounts/{accountId} endpoint</code></li>
 <li>Push your changes.</li>
 </ul>
-<p><a href="#R-image-71d0ec94f368e3b1d372bd02220696f4" class="lightbox-link"><img alt="`module-04-commit-3" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-71d0ec94f368e3b1d372bd02220696f4"><img alt="`module-04-commit-3" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-3.png"></a></p>
+<p><a href="#R-image-d091c496671b3dd9f00f746ada448a0d" class="lightbox-link"><img alt="`module-04-commit-3" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d091c496671b3dd9f00f746ada448a0d"><img alt="`module-04-commit-3" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-3.png"></a></p>
 <h2 id="step-5-manually-create-a-delete-request-and-test">Step 5: Manually Create a Delete Request and Test</h2>
 <p>Since this request did not exist during initial collection generation, manually add it now as this will give us experience of manually creating requests as well as auto generating them.</p>
 <ul>
@@ -547,8 +547,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </li>
 <li>
 <p>Create a new HTTP request named <strong>Delete an account</strong>.
-<a href="#R-image-53eeaa09f89c84b9368a126eabb20005" class="lightbox-link"><img alt="`module-04-create-new-delete-request" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-create-new-delete-request.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-53eeaa09f89c84b9368a126eabb20005"><img alt="`module-04-create-new-delete-request" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-create-new-delete-request.png"></a></p>
+<a href="#R-image-bed5fba2cff8c3f0187bcdf56db627c0" class="lightbox-link"><img alt="`module-04-create-new-delete-request" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-create-new-delete-request.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bed5fba2cff8c3f0187bcdf56db627c0"><img alt="`module-04-create-new-delete-request" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-create-new-delete-request.png"></a></p>
 </li>
 <li>
 <p>Path: <code>{{ _.base_url }}/accounts/{{ _.accountId }}</code></p>
@@ -562,8 +562,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 <li>
 <p>Add an after-response script to unset the <code>accountId</code>:</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">insomnia</span>.<span style="color:#a6e22e">environment</span>.<span style="color:#a6e22e">unset</span>(<span style="color:#e6db74">&#34;accountId&#34;</span>)</span></span></code></pre></div>
-<p><a href="#R-image-863409f653c206ec7a1ee0797e8730be" class="lightbox-link"><img alt="`module-04-delete-request-details" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-delete-request-details.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-863409f653c206ec7a1ee0797e8730be"><img alt="`module-04-delete-request-details" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-delete-request-details.png"></a></p>
+<p><a href="#R-image-b1f1c8776cb665f645d82a39ccd9a71e" class="lightbox-link"><img alt="`module-04-delete-request-details" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-delete-request-details.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1f1c8776cb665f645d82a39ccd9a71e"><img alt="`module-04-delete-request-details" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-delete-request-details.png"></a></p>
 </li>
 </ul>
 <p>Note: This request will not work at the moment as the underlying implementation does not yet support the delete an account endpoint.</p>
@@ -576,16 +576,16 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">equal</span>(<span style="color:#ae81ff">204</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">satisfy</span>((<span style="color:#a6e22e">body</span>) =&gt; <span style="color:#a6e22e">body</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>);</span></span></code></pre></div>
-<p><a href="#R-image-8f69fd115447870f8d2c7dd052ba2678" class="lightbox-link"><img alt="`module-04-delete-test" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-delete-test.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8f69fd115447870f8d2c7dd052ba2678"><img alt="`module-04-delete-test" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-delete-test.png"></a></p>
+<p><a href="#R-image-0a55704d184a87016629f9433db6ef1d" class="lightbox-link"><img alt="`module-04-delete-test" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-delete-test.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a55704d184a87016629f9433db6ef1d"><img alt="`module-04-delete-test" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-delete-test.png"></a></p>
 <p>Note: This test will not pass at the moment as the underlying implementation does not yet support the delete an account endpoint.</p>
 <p><strong>Commit and Push:</strong></p>
 <ul>
 <li>Commit message: <code>feat: add request and test for DELETE /accounts/{accountId}</code></li>
 <li>Push your changes.</li>
 </ul>
-<p><a href="#R-image-7c08f94302976dfd5aa7c0173f6eb712" class="lightbox-link"><img alt="`module-04-commit-4" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c08f94302976dfd5aa7c0173f6eb712"><img alt="`module-04-commit-4" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-4.png"></a></p>
+<p><a href="#R-image-bd4e9cf7444a7d17e9f2b697c4c1b108" class="lightbox-link"><img alt="`module-04-commit-4" class="lazy lightbox figure-image" loading="lazy" src="/04-testing/images/module-04-commit-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd4e9cf7444a7d17e9f2b697c4c1b108"><img alt="`module-04-commit-4" class="lazy lightbox lightbox-image" loading="lazy" src="/04-testing/images/module-04-commit-4.png"></a></p>
 <p>After committing and pushing:</p>
 <ul>
 <li>Create a pull request from your <code>feature/add-test-suites-and-delete-endpoint</code> branch into <code>main</code>.</li>
@@ -642,7 +642,7 @@ Understand how Test Suites improve API quality Create automated tests linked to 
       <div id="R-header-wrapper" class="default-animation">
         <div id="R-header" class="default-animation">
           <a id="R-logo" class="R-default" href="/index.html">
-            <div class="logo-title">APIOps with Kong Konnect and Insomnia</div>
+            <div class="logo-title">APIOps with Insomnia</div>
           </a>
         </div>
         <search><form action="/search/index.html" method="get">
@@ -703,8 +703,8 @@ Understand how Test Suites improve API quality Create automated tests linked to 
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1756807831" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756807831" defer></script>
-    <script src="/js/theme.js?1756807831" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1756838021" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1756838021" defer></script>
+    <script src="/js/theme.js?1756838021" defer></script>
   </body>
 </html>

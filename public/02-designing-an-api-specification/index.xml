@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>02 - Building the API Specification :: APIOps with Kong Konnect and Insomnia</title>
+    <title>02 - Building the API Specification :: APIOps with Insomnia</title>
     <link>http://localhost:1313/02-designing-an-api-specification/index.html</link>
     <description>In this module, we will design and build a structured OpenAPI specification for the Accounts API, using Insomnia’s built-in Git integration and linting features.&#xA;By the end of this module, you’ll have:&#xA;Created a Git-tracked design document Defined a valid and useful OpenAPI specification Built endpoints with proper schemas, examples, and metadata Practiced clean Git commit habits Prepared the foundation for generating collections and creating tests Important: We will commit and push changes at key points, following best practice.</description>
     <generator>Hugo</generator>

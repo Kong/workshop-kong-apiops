@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>08 - Secrets and Secure Collaboration :: APIOps with Kong Konnect and Insomnia</title>
+    <title>08 - Secrets and Secure Collaboration :: APIOps with Insomnia</title>
     <link>http://localhost:1313/08-secrets-and-secure-collaboration/index.html</link>
     <description>Managing secrets securely is a vital part of working with APIs, especially in teams and across environments. In this module, we’ll explore how Insomnia supports secret management and how you can integrate with enterprise-grade external vaults to securely store and share sensitive data.&#xA;We will:&#xA;Explore how secret management works in Insomnia Compare local secrets with enterprise external vaults Focus on using HashiCorp Vault (on-premises) with AppRole authentication Walk through a full example using the transactions-service and a locally running HCV instance Official docs:</description>
     <generator>Hugo</generator>
